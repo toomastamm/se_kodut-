@@ -1,2 +1,2 @@
-# se_kodut-
+# se_kodutöö
 Sissejuhatus erialasse veebilehe kodutöö
