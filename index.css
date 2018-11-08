@@ -1,10 +1,16 @@
+/* Jagatud */
+
 .navbar {
 
 }
 
 .sisu {
-
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
 }
+
+/* index.html */
 
 .filtrid {
 
@@ -14,3 +20,39 @@
 
 }
 
+
+/* toode.html */
+
+.toode .nimi {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.toode .kirjeldus {
+    font-size: 16px;
+}
+
+.toode .vasak {
+    width: 50%;
+    float: left;
+}
+
+.toode .parem {
+    width: 30%;
+    margin-left: 70%;
+}
+
+.toode .pilt {
+    width: 100%;
+}
+
+.toode .hind {
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.error {
+
+}
