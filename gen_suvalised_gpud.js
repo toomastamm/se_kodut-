@@ -27,8 +27,8 @@ for (i = 0; i < 50; i++) {
             "GPU ENGINE SPECS": {
                 "CUDA Cores": suvaline_number(1000,3000),
                 "Graphics Clock (MHz)": suvaline_number(1000,3000),
-                "Processor Clock (MHz": suvaline_number(1000,3000),
-                "Graphics Performance": suvaline_number(1000,3000),
+                "Processor Clock (MHz)": suvaline_number(1000,3000),
+                "Graphics Performance Score": suvaline_number(1000,3000),
             },
             "Memory Specs": {
                 "Memory Clock": suvaline_number(1,10) + "10 Gbps",
