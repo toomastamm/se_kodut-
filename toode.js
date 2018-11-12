@@ -13,7 +13,7 @@ if (id == null) {
         document.getElementById("nimi").innerHTML = toode["nimi"];
         document.getElementById("hind").innerHTML = "Osta kohe " + toode["hind"] + "€";
         document.getElementById("kirjeldus").innerHTML = dict_tabeliks(toode["specs"]);
-        //document.getElementById("pilt").innerHTML = toode["pilt"];
+        document.getElementById("pilt").src = toode["pilt"];
     }
 }
 
