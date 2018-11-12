@@ -22,12 +22,8 @@ function dict_tabeliks(dict) {
     Object.entries(dict).forEach(function (element) {
         tabel += ("<table class='tabel'><caption class='tabel_pealkiri'>" + element[0] + "</caption>");
         Object.entries(element[1]).forEach(function (element) {
-            tabel  += '<tr class="tabel_veerg"><td class="tabel_vasak_väärtus">' + element[0] + "</td>";
-            if (typeof element[1] === "number" || typeof element[1] === "string") {
-                tabel += '<td class="tabel_parem_väärtus">' + element[1] + '</td>';
-            } else if (typeof element[1] === "object") {
-                tabel += '<td class="tabel_parem_väärtus">' + (element[1].toString()) + '</td>';
-            }
+            tabel += '<tr class="tabel_veerg"><td class="tabel_vasak">' + element[0] + "</td>";
+            tabel += '<td class="tabel_parem">' + element[1].toString() + '</td>';
             tabel += '</tr>'
         });
         tabel += '</table>';

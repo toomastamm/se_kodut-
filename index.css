@@ -23,6 +23,10 @@
 
 /* toode.html */
 
+.error {
+
+}
+
 .toode .nimi {
     font-size: 24px;
     font-weight: bold;
@@ -35,6 +39,7 @@
 .toode .vasak {
     width: 50%;
     float: left;
+    overflow:  auto;
 }
 
 .toode .parem {
@@ -53,10 +58,6 @@
     font-size: 24px;
 }
 
-.error {
-
-}
-
 .tabel {
     width: 100%;
     border: 1px solid;
@@ -73,21 +74,12 @@
 }
 
 .tabel_vasak {
-    float: left;
-    width: 50%;
-}
-
-.tabel_vasak_väärtus {
     font-weight:bold;
     width: 50%;
 }
 
-.tabel_parem_väärtus {
+.tabel_parem {
     width: 50%;
 }
 
-.tabel_parem {
-    margin-left: 50%;
-    width: 50%;
-}
 
