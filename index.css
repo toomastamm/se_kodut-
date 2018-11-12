@@ -72,6 +72,7 @@
 .tabel_vasak_väärtus {
     font-weight:bold;
     border: 1px solid;
+    border-right: hidden;
 }
 
 .tabel_parem_väärtus {
