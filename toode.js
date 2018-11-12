@@ -5,7 +5,7 @@ if (id == null) {
     muuda_nähtavust("toode");
     document.title = "Viga - Mingi Pood";
 } else {
-    let toode = toode_IDst(tooted, id);
+    let toode = toode_IDst(tooted, parseInt(id));
 
     if (toode === false) {
         muuda_nähtavust("toode");
