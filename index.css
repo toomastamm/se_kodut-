@@ -56,3 +56,23 @@
 .error {
 
 }
+
+.tabel_vasak {
+    float: left;
+    width: 50%;
+}
+
+.tabel_vasak_väärtus {
+    font-weight:bold;
+    border: 1px solid;
+}
+
+.tabel_parem_väärtus {
+    font-weight:bold;
+    border: 1px solid;
+}
+
+.tabel_parem {
+    margin-left: 50%;
+    width: 50%;
+}
