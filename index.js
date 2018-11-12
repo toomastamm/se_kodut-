@@ -20,7 +20,7 @@ function muuda_nähtavust(id) {
 function dict_tabeliks(dict) {
     let tabel = "";
     Object.entries(dict).forEach(function (element) {
-        tabel += ("<h3>" + element[0] + "</h3>");
+        tabel += ("<div class='tabel_pealkiri'>" + element[0] + "</div>");
         let vasak = '<div class="tabel_vasak">';
         let parem = '<div class="tabel_parem">';
         Object.entries(element[1]).forEach(function (element) {
