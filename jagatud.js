@@ -20,21 +20,17 @@ function muuda_nähtavust(id) {
 function dict_tabeliks(dict) {
     let tabel = "";
     Object.entries(dict).forEach(function (element) {
-        tabel += ("<div class='tabel_pealkiri'>" + element[0] + "</div>");
-        let vasak = '<div class="tabel_vasak">';
-        let parem = '<div class="tabel_parem">';
+        tabel += ("<table class='tabel'><caption class='tabel_pealkiri'>" + element[0] + "</caption>");
         Object.entries(element[1]).forEach(function (element) {
-            vasak += '<div class="tabel_vasak_väärtus">' + element[0] + "</div>";
+            tabel  += '<tr class="tabel_veerg"><td class="tabel_vasak_väärtus">' + element[0] + "</td>";
             if (typeof element[1] === "number" || typeof element[1] === "string") {
-                parem += '<div class="tabel_parem_väärtus">' + element[1] + '</div>';
+                tabel += '<td class="tabel_parem_väärtus">' + element[1] + '</td>';
             } else if (typeof element[1] === "object") {
-                parem += '<div class="tabel_parem_väärtus">' + (element[1].toString()) + '</div>';
+                tabel += '<td class="tabel_parem_väärtus">' + (element[1].toString()) + '</td>';
             }
+            tabel += '</tr>'
         });
-        vasak += '</div>';
-        parem += '</div>';
-        tabel += vasak;
-        tabel += parem;
+        tabel += '</table>';
         console.log("---")
     });
 

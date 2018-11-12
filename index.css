@@ -57,6 +57,14 @@
 
 }
 
+.tabel {
+    width: 100%;
+    border: 1px solid;
+}
+
+.tabel_veerg {
+    width: 100%;
+}
 .tabel_pealkiri {
     font-weight: bold;
     font-size: 18px;
@@ -71,12 +79,11 @@
 
 .tabel_vasak_väärtus {
     font-weight:bold;
-    border: 1px solid;
-    border-right: hidden;
+    width: 50%;
 }
 
 .tabel_parem_väärtus {
-    border: 1px solid;
+    width: 50%;
 }
 
 .tabel_parem {
