@@ -1,7 +1,26 @@
 /* Jagatud */
 
 .navbar {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+  background-color: #75D87C;
+  text-align: center;
+  outline: 2px solid black;
+}
 
+.navbar h {
+  margin: 5%;
+}
+
+.poenimi {
+  font-family: "Impact";
+  margin: 40%;
+  text-decoration: none;
+  color: red;
+  font-size: 45pt;
+  text-shadow: 2px -2px black;
 }
 
 .sisu {
@@ -81,5 +100,3 @@
 .tabel_parem {
     width: 50%;
 }
-
-
