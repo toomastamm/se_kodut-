@@ -6,9 +6,9 @@ function suvaline_number(min, max) {
 
 function suvalised_listist(list, protsent) {
     let uus_list = [];
-    for (let i=0; i<list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         let x = Math.random();
-        if (x < protsent/100) {
+        if (x < protsent / 100) {
             uus_list.push(list[i])
         }
     }
@@ -51,7 +51,7 @@ function gen_ram(id) {
 }
 
 function gen_cpu(id) {
-    let nimi = "j" + suvaline_number(1, 9) + "-" + suvaline_number(1000,9999) + suvalised_listist(["k", "h", "q", "m"], 25);
+    let nimi = "j" + suvaline_number(1, 9) + "-" + suvaline_number(1000, 9999) + suvalised_listist(["k", "h", "q", "m"], 25);
     let cpu = {
         "id": id,
         "type": "cpu",
@@ -65,9 +65,9 @@ function gen_cpu(id) {
                 "Tüüp": nimi.substr(0, 2),
             },
             "TEHINILISED NÄITAJAD": {
-              "CPU CLOCK": suvaline_number(10, 36)/10 + "GHz",
-              "CORE COUNT": suvaline_listist([1, 2, 4, 8, 16]),
-              "SOCKET": suvaline_number(1000, 9999) + "S",
+                "CPU CLOCK": suvaline_number(10, 36) / 10 + "GHz",
+                "CORE COUNT": suvaline_listist([1, 2, 4, 8, 16]),
+                "SOCKET": suvaline_number(1000, 9999) + "S",
             },
         },
     };
@@ -79,25 +79,25 @@ function gen_gpu(id) {
     let gpu = {
         "id": id,
         "type": "gpu",
-        "nimi": "GTX " + suvaline_number(1,9) + suvaline_number(1,9) + suvaline_number(1, 9) +"0",
+        "nimi": "GTX " + suvaline_number(1, 9) + suvaline_number(1, 9) + suvaline_number(1, 9) + "0",
         "hind": suvaline_number(100, 5000),
         "pilt": "pildid/gpu.png",
 
         "specs": {
             "GPU ENGINE SPECS": {
-                "CUDA Cores": suvaline_number(1000,3000),
-                "Graphics Clock (MHz)": suvaline_number(1000,3000),
-                "Processor Clock (MHz)": suvaline_number(1000,3000),
-                "Graphics Performance Score": suvaline_number(1000,3000),
+                "CUDA Cores": suvaline_number(1000, 3000),
+                "Graphics Clock (MHz)": suvaline_number(1000, 3000),
+                "Processor Clock (MHz)": suvaline_number(1000, 3000),
+                "Graphics Performance Score": suvaline_number(1000, 3000),
             },
             "Memory Specs": {
-                "Memory Clock": suvaline_number(1,10) + "10 Gbps",
-                "Standard Memory Config": suvaline_number(1,16) + " GB GDDR" + suvaline_number(1,5) + "X",
-                "Memory Interface": "GDDR" + suvaline_number(1,5),
+                "Memory Clock": suvaline_number(1, 10) + "10 Gbps",
+                "Standard Memory Config": suvaline_number(1, 16) + " GB GDDR" + suvaline_number(1, 5) + "X",
+                "Memory Interface": "GDDR" + suvaline_number(1, 5),
                 "Memory Interface Width": "256-bit",
             },
             "Feature Support": {
-                "Bus Support": "PCIe " + suvaline_number(1,3) + ".0",
+                "Bus Support": "PCIe " + suvaline_number(1, 3) + ".0",
                 "Supported Technologies": suvalised_listist(["SLI", "KUDA", "3D Vizion", "PhysZ", "MVIDIA G-SYNC™",
                     "GameRiver", "ShadowWorking", "DirectX 12", "VR", "Anseel", "MVIDIA WhisperMode"], 50),
             },
@@ -113,7 +113,7 @@ function gen_gpu(id) {
             "Thermal and Power Specs": {
                 "Maximum GPU Temperature (in C)": suvaline_number(60, 120),
                 "Maximum Graphics Card Power (W)": suvaline_number(20, 500),
-                "Minimum System Power Requirement (W)": suvaline_number(500,1000),
+                "Minimum System Power Requirement (W)": suvaline_number(500, 1000),
                 "Supplementary Power Connectors": suvaline_number(4, 8) + "-pin",
             },
         }
@@ -121,6 +121,7 @@ function gen_gpu(id) {
 
     return gpu
 }
+
 for (i = 0; i < 100; i++) {
     tooted.push(suvaline_listist([gen_gpu(i), gen_cpu(i), gen_ram((i))]))
 }
