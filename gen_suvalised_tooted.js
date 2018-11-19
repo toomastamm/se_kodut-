@@ -24,7 +24,7 @@ function gen_ram(id) {
     let gb = suvaline_number(1, 32);
     let ddr = suvaline_number(1, 4);
     let nimi = gb + "GB DDR" + ddr;
-    let ram = {
+    return {
         "id": id,
         "type": "ram",
         "nimi": nimi,
@@ -45,14 +45,12 @@ function gen_ram(id) {
                 "Lisad": suvalised_listist(["Anti-Static band", "Protective plastic", "Bubblewrap", "-10% off coupon"], 40),
             }
         },
-    };
-
-    return ram
+    }
 }
 
 function gen_cpu(id) {
     let nimi = "j" + suvaline_number(1, 9) + "-" + suvaline_number(1000, 9999) + suvalised_listist(["k", "h", "q", "m"], 25);
-    let cpu = {
+    return {
         "id": id,
         "type": "cpu",
         "nimi": nimi,
@@ -70,13 +68,11 @@ function gen_cpu(id) {
                 "SOCKET": suvaline_number(1000, 9999) + "S",
             },
         },
-    };
-
-    return cpu
+    }
 }
 
 function gen_gpu(id) {
-    let gpu = {
+    return {
         "id": id,
         "type": "gpu",
         "nimi": "GTX " + suvaline_number(1, 9) + suvaline_number(1, 9) + suvaline_number(1, 9) + "0",
@@ -117,12 +113,10 @@ function gen_gpu(id) {
                 "Supplementary Power Connectors": suvaline_number(4, 8) + "-pin",
             },
         }
-    };
-
-    return gpu
+    }
 }
 
-for (i = 0; i < 100; i++) {
+for (let i = 0; i < 100; i++) {
     tooted.push(suvaline_listist([gen_gpu(i), gen_cpu(i), gen_ram((i))]))
 }
 

@@ -1,5 +1,5 @@
 const parameetrid = new URLSearchParams(window.location.search);
-var type = parameetrid.get('type');
+let type = parameetrid.get('type');
 
 if (type == null) {
     console.log("Tüüpi pole määratud");
@@ -16,7 +16,7 @@ for (let i = 0; i < tooted.length; i++) {
 
 console.log(uus_tooted);
 
-var filtrid = document.getElementById("filtrid");
+const filtrid = document.getElementById("filtrid");
 
 filtrid.onchange = function () {
     let valik = filtrid.options[filtrid.selectedIndex].value;

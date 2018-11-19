@@ -20,7 +20,7 @@ body {
 }
 
 .poenimi {
-    font-family: "Impact";
+    font-family: "Impact", serif;
     margin: 40%;
     text-decoration: none;
     color: red;
