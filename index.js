@@ -23,22 +23,25 @@ filtrid.onchange = function() {
     if (valik === "kallimad") {
         uus_tooted.sort(function (a,b) {
             if (a["hind"] < b["hind"]) {
-                return -1
-            } else if (a["hind"] > b["hind"]) {
                 return 1
+            } else if (a["hind"] > b["hind"]) {
+                return -1
             }
             return 0
         });
     } else if (valik === "odavamad") {
         uus_tooted.sort(function (a,b) {
             if (a["hind"] < b["hind"]) {
-                return 1
-            } else if (a["hind"] > b["hind"]) {
                 return -1
+            } else if (a["hind"] > b["hind"]) {
+                return 1
             }
             return 0
         });
     }
 
-    console.log(uus_tooted)
+    for (let i=0; i<uus_tooted.length; i++) {
+        console.log(uus_tooted[i]["hind"])
+    }
+    console.log("-----")
 };
