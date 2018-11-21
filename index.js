@@ -51,5 +51,4 @@ filtrid.onchange = function () {
     }
 
     console.log("-----")
-}
-;
+};
