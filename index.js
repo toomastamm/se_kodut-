@@ -24,33 +24,24 @@ filtrid.onchange = function () {
         uus_tooted.sort(function (a, b) {
             a = a["nimi"].toLowerCase();
             b = b["nimi"].toLowerCase();
-            if (a < b) {
-                return 1
-            } else if (a > b) {
-                return -1
-            }
+            if (a < b) { return 1 }
+            if (a > b) { return -1 }
             return 0
         })
     } else if (valik === "kallimad") {
         uus_tooted.sort(function (a, b) {
             a = a["hind"];
             b = b["hind"];
-            if (a < b) {
-                return 1
-            } else if (a > b) {
-                return -1
-            }
+            if (a < b) { return 1 }
+            if (a > b) { return -1 }
             return 0
         });
     } else if (valik === "odavamad") {
         uus_tooted.sort(function (a, b) {
             a = a["hind"];
             b = b["hind"];
-            if (a < b) {
-                return -1
-            } else if (a > b) {
-                return 1
-            }
+            if (a < b) { return -1 }
+            if (a > b) { return 1 }
             return 0
         });
     }
