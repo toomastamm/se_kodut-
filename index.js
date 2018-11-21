@@ -20,20 +20,35 @@ const filtrid = document.getElementById("filtrid");
 
 filtrid.onchange = function () {
     let valik = filtrid.options[filtrid.selectedIndex].value;
-    if (valik === "kallimad") {
+    if (valik === "nimi") {
         uus_tooted.sort(function (a, b) {
-            if (a["hind"] < b["hind"]) {
+            a = a["nimi"].toLowerCase();
+            b = b["nimi"].toLowerCase();
+            if (a < b) {
                 return 1
-            } else if (a["hind"] > b["hind"]) {
+            } else if (a > b) {
+                return -1
+            }
+            return 0
+        })
+    } else if (valik === "kallimad") {
+        uus_tooted.sort(function (a, b) {
+            a = a["hind"];
+            b = b["hind"];
+            if (a < b) {
+                return 1
+            } else if (a > b) {
                 return -1
             }
             return 0
         });
     } else if (valik === "odavamad") {
         uus_tooted.sort(function (a, b) {
-            if (a["hind"] < b["hind"]) {
+            a = a["hind"];
+            b = b["hind"];
+            if (a < b) {
                 return -1
-            } else if (a["hind"] > b["hind"]) {
+            } else if (a > b) {
                 return 1
             }
             return 0
@@ -41,8 +56,9 @@ filtrid.onchange = function () {
     }
 
     for (let i = 0; i < uus_tooted.length; i++) {
-        console.log(uus_tooted[i]["hind"])
+        console.log(uus_tooted[i])
     }
 
     console.log("-----")
-};
+}
+;
