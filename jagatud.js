@@ -17,8 +17,7 @@ function muuda_nähtavust(id) {
     }
 }
 
-function list_stringiks(list) {
-    console.log(list)
+function beautify(list) {
     if (typeof list === "string") {return list}
     if (typeof list === "number") {return list}
     let string = "";
@@ -36,7 +35,7 @@ function dict_tabeliks(dict) {
         tabel += ("<table class='tabel'><caption class='tabel_pealkiri'>" + element[0] + "</caption>");
         Object.entries(element[1]).forEach(function (element) {
             tabel += '<tr class="tabel_veerg"><td class="tabel_vasak">' + element[0] + "</td>";
-            tabel += '<td class="tabel_parem">' + list_stringiks(element[1]) + '</td>';
+            tabel += '<td class="tabel_parem">' + beautify(element[1]) + '</td>';
             tabel += '</tr>'
         });
         tabel += '</table>';
