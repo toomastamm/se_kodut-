@@ -18,10 +18,14 @@ function muuda_nähtavust(id) {
 }
 
 function beautify(list) {
-    if (typeof list === "string") {return list}
-    if (typeof list === "number") {return list}
+    if (typeof list === "string") {
+        return list
+    }
+    if (typeof list === "number") {
+        return list
+    }
     let string = "";
-    for (let i=0; i<list.length-1; i++) {
+    for (let i = 0; i < list.length - 1; i++) {
         string += list[i];
         string += ", "
     }
@@ -47,11 +51,11 @@ function dict_tabeliks(dict) {
 
 function tooted_flexiks(tooted) {
     let flex = "";
-    for (let i=0; i<tooted.length; i++) {
+    for (let i = 0; i < tooted.length; i++) {
         flex += '<div class="asi">';
         flex += '<img class="pilt" src="' + tooted[i]["pilt"] + '">';
         flex += '<div class="nimi">' + tooted[i]["nimi"] + '</div>';
-        flex += '<a class="hind" href="' + "toode.html?id=" + tooted[i]["id"] +  '">' + tooted[i]["hind"] + '€</a>';
+        flex += '<a class="hind" href="' + "toode.html?id=" + tooted[i]["id"] + '">' + tooted[i]["hind"] + '€</a>';
         flex += '</div>'
     }
     //console.log(flex);
