@@ -2,7 +2,7 @@ const parameetrid = new URLSearchParams(window.location.search);
 let type = parameetrid.get('type');
 
 if (type == null) {
-    console.log("Tüüpi pole määratud");
+    ////console.log("Tüüpi pole määratud");
     type = "gpu"
 }
 
@@ -48,5 +48,5 @@ filtrid.onchange = function () {
 
     document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
 
-    console.log("-----")
+    //////console.log("-----")
 };

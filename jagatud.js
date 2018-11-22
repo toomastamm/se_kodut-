@@ -39,7 +39,7 @@ function dict_tabeliks(dict) {
             tabel += '</tr>'
         });
         tabel += '</table>';
-        console.log("---")
+        //console.log("---")
     });
 
     return tabel
@@ -54,6 +54,6 @@ function tooted_flexiks(tooted) {
         flex += '<a class="hind" href="' + "toode.html?id=" + tooted[i]["id"] +  '">' + tooted[i]["hind"] + '€</a>';
         flex += '</div>'
     }
-    console.log(flex);
+    //console.log(flex);
     return flex
 }
