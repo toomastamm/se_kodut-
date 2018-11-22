@@ -2,7 +2,7 @@ const parameetrid = new URLSearchParams(window.location.search);
 let type = parameetrid.get('type');
 
 if (type == null) {
-    console.log("Tüüpi pole määratud");
+    ////console.log("Tüüpi pole määratud");
     type = "gpu"
 }
 
@@ -14,35 +14,39 @@ for (let i = 0; i < tooted.length; i++) {
     }
 }
 
-console.log(uus_tooted);
+document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
 
 const filtrid = document.getElementById("filtrid");
 
 filtrid.onchange = function () {
     let valik = filtrid.options[filtrid.selectedIndex].value;
-    if (valik === "kallimad") {
+    if (valik === "nimi") {
         uus_tooted.sort(function (a, b) {
-            if (a["hind"] < b["hind"]) {
-                return 1
-            } else if (a["hind"] > b["hind"]) {
-                return -1
-            }
+            a = a["nimi"].toLowerCase();
+            b = b["nimi"].toLowerCase();
+            if (a < b) { return -1 }
+            if (a > b) { return 1 }
+            return 0
+        })
+    } else if (valik === "kallimad") {
+        uus_tooted.sort(function (a, b) {
+            a = a["hind"];
+            b = b["hind"];
+            if (a < b) { return 1 }
+            if (a > b) { return -1 }
             return 0
         });
     } else if (valik === "odavamad") {
         uus_tooted.sort(function (a, b) {
-            if (a["hind"] < b["hind"]) {
-                return -1
-            } else if (a["hind"] > b["hind"]) {
-                return 1
-            }
+            a = a["hind"];
+            b = b["hind"];
+            if (a < b) { return -1 }
+            if (a > b) { return 1 }
             return 0
         });
     }
 
-    for (let i = 0; i < uus_tooted.length; i++) {
-        console.log(uus_tooted[i]["hind"])
-    }
+    document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
 
-    console.log("-----")
+    //////console.log("-----")
 };
