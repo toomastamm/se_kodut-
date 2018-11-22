@@ -14,7 +14,7 @@ for (let i = 0; i < tooted.length; i++) {
     }
 }
 
-console.log(uus_tooted);
+document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
 
 const filtrid = document.getElementById("filtrid");
 
@@ -46,9 +46,7 @@ filtrid.onchange = function () {
         });
     }
 
-    for (let i = 0; i < uus_tooted.length; i++) {
-        console.log(uus_tooted[i])
-    }
+    document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
 
     console.log("-----")
 };

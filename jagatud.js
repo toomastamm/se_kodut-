@@ -32,3 +32,16 @@ function dict_tabeliks(dict) {
 
     return tabel
 }
+
+function tooted_flexiks(tooted) {
+    let flex = "";
+    for (let i=0; i<tooted.length; i++) {
+        flex += '<div class="asi">';
+        flex += '<img class="pilt" src="' + tooted[i]["pilt"] + '">';
+        flex += '<div class="nimi">' + tooted[i]["nimi"] + '</div>';
+        flex += '<a class="hind" href="' + "toode.html?id=" + tooted[i]["id"] +  '">' + tooted[i]["hind"] + '€</a>';
+        flex += '</div>'
+    }
+    console.log(flex);
+    return flex
+}
