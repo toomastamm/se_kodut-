@@ -1,25 +1,15 @@
-const parameetrid = new URLSearchParams(window.location.search);
+const filtrid = document.getElementById("filtrid");
+
+let parameetrid = new URLSearchParams(window.location.search);
 let type = parameetrid.get('type');
-
-if (type == null) {
-    ////console.log("Tüüpi pole määratud");
-    type = "gpu"
-}
-
+let filter = parameetrid.get('filter');
 let uus_tooted = [];
 
-for (let i = 0; i < tooted.length; i++) {
-    if (tooted[i]["type"] === type) {
-        uus_tooted.push(tooted[i])
-    }
-}
-
-document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
-
-const filtrid = document.getElementById("filtrid");
 
 filtrid.onchange = function () {
     let valik = filtrid.options[filtrid.selectedIndex].value;
+    parameetrid.set("filter", valik);
+    window.history.replaceState("", "", window.location.href.split('?')[0] + "?" + parameetrid.toString());
     if (valik === "nimi") {
         uus_tooted.sort(function (a, b) {
             a = a["nimi"].toLowerCase();
@@ -47,6 +37,24 @@ filtrid.onchange = function () {
     }
 
     document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
-
-    //////console.log("-----")
 };
+
+
+if (type == null) {
+    type = "gpu";
+    parameetrid.set("type", type);
+    window.history.replaceState("", "", window.location.href.split('?')[0] + "?" + parameetrid.toString());
+}
+
+for (let i = 0; i < tooted.length; i++) {
+    if (tooted[i]["type"] === type) {
+        uus_tooted.push(tooted[i])
+    }
+}
+
+if (filter !== null) {
+    filtrid.value = filter;
+    filtrid.onchange();
+}
+
+document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
