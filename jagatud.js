@@ -29,7 +29,7 @@ function vormista(list) {
         string += list[i];
         string += ", "
     }
-    string += list[list.length];
+    string += list[list.length-1];
     return string
 }
 
