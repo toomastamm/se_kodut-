@@ -61,6 +61,7 @@ body {
 .asi .hind {
     color: red;
     font-size: 24px;
+    display: block;
 }
 
 /* toode.html */

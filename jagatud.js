@@ -55,7 +55,8 @@ function html_tootelist(tooted, sihtmärk, template) {
         toode = document.importNode(template.content, true);
         toode.querySelector("#pilt").src = tooted[i]["pilt"];
         toode.querySelector("#nimi").textContent = tooted[i]["nimi"];
-        toode.querySelector("#hind").textContent = tooted[i]["hind"];
+        toode.querySelector("#hind").textContent = tooted[i]["hind"] +  "€";
+        toode.querySelector("#hind").href = "toode.html?id=" + tooted[i]["id"];
         sihtmärk.appendChild(toode);
         console.log(toode)
     }
