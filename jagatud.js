@@ -17,7 +17,7 @@ function muuda_nähtavust(id) {
     }
 }
 
-function beautify(list) {
+function vormista(list) {
     if (typeof list === "string") {
         return list
     }
@@ -33,19 +33,21 @@ function beautify(list) {
     return string
 }
 
-function dict_tabeliks(dict) {
-    let tabel = "";
-    Object.entries(dict).forEach(function (element) {
-        tabel += ("<table class='tabel'><caption class='tabel_pealkiri'>" + element[0] + "</caption>");
+function html_speclist(specs, sihtmärk, template_tabel, template_veerg) {
+    sihtmärk.innerHTML = "";
+    Object.entries(specs).forEach(function (element) {
+        let tabel = document.importNode(template_tabel.content, true);
+        tabel.querySelector("#tabel_pealkiri").innerHTML = element[0];
         Object.entries(element[1]).forEach(function (element) {
-            tabel += '<tr class="tabel_veerg"><td class="tabel_vasak">' + element[0] + "</td>";
-            tabel += '<td class="tabel_parem">' + beautify(element[1]) + '</td>';
-            tabel += '</tr>'
+            let veerg = document.importNode(template_veerg.content, true);
+            veerg.querySelector("#tabel_vasak").innerHTML = element[0];
+            veerg.querySelector("#tabel_parem").innerHTML = vormista(element[1]);
+            tabel.querySelector("#specs_tabel").appendChild(veerg);
         });
-        tabel += '</table>';
+
+        sihtmärk.appendChild(tabel)
     });
 
-    return tabel
 }
 
 function html_tootelist(tooted, sihtmärk, template) {

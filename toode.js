@@ -1,5 +1,8 @@
 const parameetrid = new URLSearchParams(window.location.search);
 const id = parameetrid.get('id');
+const html_toode_kirjeldus = document.getElementById("kirjeldus");
+const template_tabel = document.getElementById("tabel");
+const template_veerg = document.getElementById("veerg");
 
 if (id == null) {
     muuda_nähtavust("toode");
@@ -16,8 +19,8 @@ if (id == null) {
         document.title = toode["nimi"] + " - Macro Center";
         document.getElementById("nimi").innerHTML = toode["nimi"];
         document.getElementById("hind").innerHTML = toode["hind"];
-        document.getElementById("kirjeldus").innerHTML = dict_tabeliks(toode["specs"]);
         document.getElementById("pilt").src = toode["pilt"];
+        html_speclist(toode["specs"], html_toode_kirjeldus, template_tabel, template_veerg);
     }
 }
 
