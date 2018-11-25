@@ -24,7 +24,11 @@ function vormista(list) {
     if (typeof list === "number") {
         return list
     }
+
+    if (list.length === 0) { return "" }
+    
     let string = "";
+
     for (let i = 0; i < list.length - 1; i++) {
         string += list[i];
         string += ", "
