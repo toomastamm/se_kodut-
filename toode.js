@@ -17,7 +17,7 @@ if (id == null) {
     } else {
         document.title = toode["nimi"] + " - Macro Center";
         document.getElementById("nimi").innerHTML = toode["nimi"];
-        document.getElementById("hind").innerHTML = toode["hind"];
+        document.getElementById("hind").innerHTML = toode["hind"] + "€";
         document.getElementById("pilt").src = toode["pilt"];
         html_speclist(toode["specs"], html_toode_kirjeldus, template_tabel, template_veerg);
         muuda_nähtavust("toode");
