@@ -1,9 +1,12 @@
 const filtrid = document.getElementById("filtrid");
+const template_toode = document.getElementById("toode");
+const html_toodete_list = document.getElementById("tooted");
 
 let parameetrid = new URLSearchParams(window.location.search);
 let type = parameetrid.get('type');
 let filter = parameetrid.get('filter');
 let uus_tooted = [];
+
 
 
 filtrid.onchange = function () {
@@ -36,7 +39,7 @@ filtrid.onchange = function () {
         });
     }
 
-    document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
+    html_tootelist(uus_tooted, html_toodete_list, template_toode);
 };
 
 
@@ -57,4 +60,4 @@ if (filter !== null) {
     filtrid.onchange();
 }
 
-document.getElementById("tooted").innerHTML = tooted_flexiks(uus_tooted);
+html_tootelist(uus_tooted, html_toodete_list, template_toode);

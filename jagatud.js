@@ -43,21 +43,20 @@ function dict_tabeliks(dict) {
             tabel += '</tr>'
         });
         tabel += '</table>';
-        //console.log("---")
     });
 
     return tabel
 }
 
-function tooted_flexiks(tooted) {
+function html_tootelist(tooted, sihtmärk, template) {
     let flex = "";
+    sihtmärk.innerHTML = "";
     for (let i = 0; i < tooted.length; i++) {
-        flex += '<div class="asi">';
-        flex += '<img class="pilt" src="' + tooted[i]["pilt"] + '">';
-        flex += '<div class="nimi">' + tooted[i]["nimi"] + '</div>';
-        flex += '<a class="hind" href="' + "toode.html?id=" + tooted[i]["id"] + '">' + tooted[i]["hind"] + '€</a>';
-        flex += '</div>'
+        toode = document.importNode(template.content, true);
+        toode.querySelector("#pilt").src = tooted[i]["pilt"];
+        toode.querySelector("#nimi").textContent = tooted[i]["nimi"];
+        toode.querySelector("#hind").textContent = tooted[i]["hind"];
+        sihtmärk.appendChild(toode);
+        console.log(toode)
     }
-    //console.log(flex);
-    return flex
 }
