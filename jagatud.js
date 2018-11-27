@@ -17,23 +17,23 @@ function muuda_nähtavust(id) {
     }
 }
 
-function vormista(list) {
-    if (typeof list === "string") {
-        return list
+function vormista(variable) {
+    if (typeof variable === "string") {
+        return variable
     }
-    if (typeof list === "number") {
-        return list
+    if (typeof variable === "number") {
+        return variable
     }
 
-    if (list.length === 0) { return "" }
-    
+    if (variable.length === 0) { return "" }
+
     let string = "";
 
-    for (let i = 0; i < list.length - 1; i++) {
-        string += list[i];
+    for (let i = 0; i < variable.length - 1; i++) {
+        string += variable[i];
         string += ", "
     }
-    string += list[list.length-1];
+    string += variable[variable.length-1];
     return string
 }
 
