@@ -27,14 +27,7 @@ function vormista(variable) {
 
     if (variable.length === 0) { return "" }
 
-    let string = "";
-
-    for (let i = 0; i < variable.length - 1; i++) {
-        string += variable[i];
-        string += ", "
-    }
-    string += variable[variable.length-1];
-    return string
+    return variable.join(", ")
 }
 
 function html_speclist(specs, sihtmärk, template_tabel, template_veerg) {
