@@ -53,7 +53,7 @@ function gen_ram(id) {
 function gen_intel_cpu(id) {
     let edition = suvalised_listist(["k", "h", "q", "m"], 25, "");
     let tüüp = "i" + suvaline_listist([3, 5, 7, 9]);
-    let mudel = suvaline_number(1000, 9999);
+    let mudel = suvaline_number(100, 999)*10;
     let nimi = "Intel " + tüüp + "-" + mudel + edition;
     return {
         "id": id,
