@@ -22,12 +22,14 @@ body {
     width: 100%;
     font-family: "Impact", serif;
     text-decoration: none;
-    color: red;
     font-size: 45pt;
     text-shadow: 2px -2px black;
     margin-bottom: 1vW;
 }
 
+.poenimi a:link, .poenimi a:visited, .poenimi a:active, .poenimi a:hover {
+    color: red;
+}
 .sisu {
     margin-left: 10%;
     margin-right: 10%;
