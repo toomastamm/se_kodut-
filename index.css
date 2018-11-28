@@ -29,6 +29,7 @@ body {
 
 .poenimi a:link, .poenimi a:visited, .poenimi a:active, .poenimi a:hover {
     color: red;
+    text-decoration: none;
 }
 .sisu {
     margin-left: 10%;
