@@ -20,8 +20,8 @@
 </div>
 
 <div class="sisu">
-    <div class="error" id="error">Toodet ei leitud</div>
-    <div class="toode" id="toode">
+    <div class="error" id="error" style="display: none;">Toodet ei leitud</div>
+    <div class="toode" id="toode" style="display: none;">
         <div class="vasak">
             <p class="nimi" id="nimi"></p>
             <p class="kirjeldus" id="kirjeldus"></p>
@@ -35,6 +35,18 @@
     </div>
 </div>
 
+<template id="tabel">
+    <table class="tabel" id="specs_tabel">
+        <caption class="tabel_pealkiri" id="tabel_pealkiri"></caption>
+    </table>
+</template>
+
+<template id="veerg">
+    <tr class="tabel_veerg">
+        <td class="tabel_vasak" id="tabel_vasak"></td>
+        <td class="tabel_parem" id="tabel_parem"></td>
+    </tr>
+</template>
 
 <script src="toode.js"></script>
 </body>

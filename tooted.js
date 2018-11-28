@@ -1,2461 +1,2795 @@
-var tooted = [{
-  id: 0,
-  type: "cpu",
-  nimi: "j3-1430",
-  hind: 474,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j3-1430",
-      "Tüüp": "j3"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2GHz",
-      "CORE COUNT": 2,
-      SOCKET: "2772S"
-    }
-  }
-}, {
-  id: 1,
-  type: "ram",
-  nimi: "6GB DDR3",
-  hind: 916,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "6GB DDR3",
-      "Moodulite arv": 1
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "6GB",
-      "Tüüp": "DDR3",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Bubblewrap"]
-    }
-  }
-}, {
-  id: 2,
-  type: "cpu",
-  nimi: "j7-9645k,q,m",
-  hind: 2429,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j7-9645k,q,m",
-      "Tüüp": "j7"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.1GHz",
-      "CORE COUNT": 2,
-      SOCKET: "4950S"
-    }
-  }
-}, {
-  id: 3,
-  type: "gpu",
-  nimi: "GTX 8810",
-  hind: 174,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1747,
-      "Graphics Clock (MHz)": 1999,
-      "Processor Clock (MHz)": 2459,
-      "Graphics Performance Score": 1200
-    },
-    "Memory Specs": {
-      "Memory Clock": "710 Gbps",
-      "Standard Memory Config": "10 GB GDDR2X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["GameRiver"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "4919x4603@78Hz",
-      "Standard Display Connectors": ["DP 1.42", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 12,
-      Height: 7,
-      Width: "1-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 82,
-      "Maximum Graphics Card Power (W)": 454,
-      "Minimum System Power Requirement (W)": 595,
-      "Supplementary Power Connectors": "4-pin"
-    }
-  }
-}, {
-  id: 4,
-  type: "cpu",
-  nimi: "j4-8470m",
-  hind: 3983,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-8470m",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.2GHz",
-      "CORE COUNT": 16,
-      SOCKET: "8178S"
-    }
-  }
-}, {
-  id: 5,
-  type: "cpu",
-  nimi: "j7-5352",
-  hind: 4135,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j7-5352",
-      "Tüüp": "j7"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.5GHz",
-      "CORE COUNT": 8,
-      SOCKET: "2428S"
-    }
-  }
-}, {
-  id: 6,
-  type: "ram",
-  nimi: "13GB DDR2",
-  hind: 384,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "13GB DDR2",
-      "Moodulite arv": 4
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "13GB",
-      "Tüüp": "DDR2",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["-10% off coupon"]
-    }
-  }
-}, {
-  id: 7,
-  type: "ram",
-  nimi: "22GB DDR3",
-  hind: 636,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "22GB DDR3",
-      "Moodulite arv": 2
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "22GB",
-      "Tüüp": "DDR3",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["-10% off coupon"]
-    }
-  }
-}, {
-  id: 8,
-  type: "gpu",
-  nimi: "GTX 3420",
-  hind: 1495,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2256,
-      "Graphics Clock (MHz)": 2874,
-      "Processor Clock (MHz)": 2321,
-      "Graphics Performance Score": 2494
-    },
-    "Memory Specs": {
-      "Memory Clock": "710 Gbps",
-      "Standard Memory Config": "7 GB GDDR4X",
-      "Memory Interface": "GDDR4",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["3D Vizion", "PhysZ", "MVIDIA G-SYNC™", "GameRiver", "DirectX 12"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "1991x2488@60Hz",
-      "Standard Display Connectors": ["DP 1.42"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 3,
-      Height: 9,
-      Width: "1-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 86,
-      "Maximum Graphics Card Power (W)": 351,
-      "Minimum System Power Requirement (W)": 702,
-      "Supplementary Power Connectors": "4-pin"
-    }
-  }
-}, {
-  id: 9,
-  type: "ram",
-  nimi: "5GB DDR1",
-  hind: 549,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "5GB DDR1",
-      "Moodulite arv": 1
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "5GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Protective plastic"]
-    }
-  }
-}, {
-  id: 10,
-  type: "ram",
-  nimi: "22GB DDR3",
-  hind: 345,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "22GB DDR3",
-      "Moodulite arv": 8
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "22GB",
-      "Tüüp": "DDR3",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band", "Bubblewrap"]
-    }
-  }
-}, {
-  id: 11,
-  type: "cpu",
-  nimi: "j3-7068",
-  hind: 2033,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j3-7068",
-      "Tüüp": "j3"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.9GHz",
-      "CORE COUNT": 1,
-      SOCKET: "3301S"
-    }
-  }
-}, {
-  id: 12,
-  type: "cpu",
-  nimi: "j8-3029",
-  hind: 1280,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j8-3029",
-      "Tüüp": "j8"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.4GHz",
-      "CORE COUNT": 4,
-      SOCKET: "6305S"
-    }
-  }
-}, {
-  id: 13,
-  type: "ram",
-  nimi: "13GB DDR2",
-  hind: 633,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "13GB DDR2",
-      "Moodulite arv": 4
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "13GB",
-      "Tüüp": "DDR2",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Protective plastic", "Bubblewrap"]
-    }
-  }
-}, {
-  id: 14,
-  type: "ram",
-  nimi: "16GB DDR2",
-  hind: 605,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "16GB DDR2",
-      "Moodulite arv": 1
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "16GB",
-      "Tüüp": "DDR2",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band"]
-    }
-  }
-}, {
-  id: 15,
-  type: "ram",
-  nimi: "12GB DDR3",
-  hind: 803,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "12GB DDR3",
-      "Moodulite arv": 2
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "12GB",
-      "Tüüp": "DDR3",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Protective plastic", "Bubblewrap", "-10% off coupon"]
-    }
-  }
-}, {
-  id: 16,
-  type: "cpu",
-  nimi: "j3-5349k,m",
-  hind: 4813,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j3-5349k,m",
-      "Tüüp": "j3"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.7GHz",
-      "CORE COUNT": 8,
-      SOCKET: "7735S"
-    }
-  }
-}, {
-  id: 17,
-  type: "cpu",
-  nimi: "j3-6361k,h",
-  hind: 3749,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j3-6361k,h",
-      "Tüüp": "j3"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.2GHz",
-      "CORE COUNT": 4,
-      SOCKET: "2724S"
-    }
-  }
-}, {
-  id: 18,
-  type: "gpu",
-  nimi: "GTX 2410",
-  hind: 2673,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1394,
-      "Graphics Clock (MHz)": 2595,
-      "Processor Clock (MHz)": 2516,
-      "Graphics Performance Score": 1654
-    },
-    "Memory Specs": {
-      "Memory Clock": "710 Gbps",
-      "Standard Memory Config": "10 GB GDDR1X",
-      "Memory Interface": "GDDR3",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["SLI", "3D Vizion", "PhysZ", "GameRiver", "ShadowWorking", "Anseel"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "781x6072@207Hz",
-      "Standard Display Connectors": ["HDMI 2.0b", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 1,
-      Height: 10,
-      Width: "2-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 79,
-      "Maximum Graphics Card Power (W)": 439,
-      "Minimum System Power Requirement (W)": 617,
-      "Supplementary Power Connectors": "4-pin"
-    }
-  }
-}, {
-  id: 19,
-  type: "cpu",
-  nimi: "j6-4396",
-  hind: 1908,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j6-4396",
-      "Tüüp": "j6"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.3GHz",
-      "CORE COUNT": 1,
-      SOCKET: "1385S"
-    }
-  }
-}, {
-  id: 20,
-  type: "ram",
-  nimi: "6GB DDR3",
-  hind: 871,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "6GB DDR3",
-      "Moodulite arv": 8
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "6GB",
-      "Tüüp": "DDR3",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: []
-    }
-  }
-}, {
-  id: 21,
-  type: "gpu",
-  nimi: "GTX 3530",
-  hind: 2447,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2132,
-      "Graphics Clock (MHz)": 1109,
-      "Processor Clock (MHz)": 2591,
-      "Graphics Performance Score": 2205
-    },
-    "Memory Specs": {
-      "Memory Clock": "510 Gbps",
-      "Standard Memory Config": "14 GB GDDR2X",
-      "Memory Interface": "GDDR3",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "KUDA", "3D Vizion", "PhysZ", "MVIDIA G-SYNC™", "VR"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "4960x4321@69Hz",
-      "Standard Display Connectors": ["DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 3,
-      Height: 12,
-      Width: "1-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 118,
-      "Maximum Graphics Card Power (W)": 161,
-      "Minimum System Power Requirement (W)": 725,
-      "Supplementary Power Connectors": "5-pin"
-    }
-  }
-}, {
-  id: 22,
-  type: "ram",
-  nimi: "27GB DDR2",
-  hind: 271,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "27GB DDR2",
-      "Moodulite arv": 2
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "27GB",
-      "Tüüp": "DDR2",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Bubblewrap"]
-    }
-  }
-}, {
-  id: 23,
-  type: "cpu",
-  nimi: "j1-5263k,q",
-  hind: 2162,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j1-5263k,q",
-      "Tüüp": "j1"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "3.3GHz",
-      "CORE COUNT": 1,
-      SOCKET: "4670S"
-    }
-  }
-}, {
-  id: 24,
-  type: "cpu",
-  nimi: "j2-4759",
-  hind: 1886,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j2-4759",
-      "Tüüp": "j2"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.4GHz",
-      "CORE COUNT": 2,
-      SOCKET: "1288S"
-    }
-  }
-}, {
-  id: 25,
-  type: "cpu",
-  nimi: "j4-8468m",
-  hind: 2997,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-8468m",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "3.5GHz",
-      "CORE COUNT": 8,
-      SOCKET: "2641S"
-    }
-  }
-}, {
-  id: 26,
-  type: "ram",
-  nimi: "16GB DDR3",
-  hind: 769,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "16GB DDR3",
-      "Moodulite arv": 1
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "16GB",
-      "Tüüp": "DDR3",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band", "Protective plastic", "-10% off coupon"]
-    }
-  }
-}, {
-  id: 27,
-  type: "gpu",
-  nimi: "GTX 2840",
-  hind: 3465,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2768,
-      "Graphics Clock (MHz)": 1523,
-      "Processor Clock (MHz)": 1570,
-      "Graphics Performance Score": 1638
-    },
-    "Memory Specs": {
-      "Memory Clock": "910 Gbps",
-      "Standard Memory Config": "9 GB GDDR3X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["PhysZ", "GameRiver", "DirectX 12"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "2406x8601@66Hz",
-      "Standard Display Connectors": ["HDMI 2.0b", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 9,
-      Height: 2,
-      Width: "2-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 87,
-      "Maximum Graphics Card Power (W)": 78,
-      "Minimum System Power Requirement (W)": 877,
-      "Supplementary Power Connectors": "6-pin"
-    }
-  }
-}, {
-  id: 28,
-  type: "cpu",
-  nimi: "j6-3191k,h,q",
-  hind: 3027,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j6-3191k,h,q",
-      "Tüüp": "j6"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.3GHz",
-      "CORE COUNT": 8,
-      SOCKET: "4271S"
-    }
-  }
-}, {
-  id: 29,
-  type: "cpu",
-  nimi: "j7-9043h,m",
-  hind: 130,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j7-9043h,m",
-      "Tüüp": "j7"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.5GHz",
-      "CORE COUNT": 8,
-      SOCKET: "6310S"
-    }
-  }
-}, {
-  id: 30,
-  type: "ram",
-  nimi: "7GB DDR2",
-  hind: 588,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "7GB DDR2",
-      "Moodulite arv": 4
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "7GB",
-      "Tüüp": "DDR2",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band", "Protective plastic", "-10% off coupon"]
-    }
-  }
-}, {
-  id: 31,
-  type: "ram",
-  nimi: "11GB DDR1",
-  hind: 149,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "11GB DDR1",
-      "Moodulite arv": 8
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "11GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: []
-    }
-  }
-}, {
-  id: 32,
-  type: "cpu",
-  nimi: "j3-9886m",
-  hind: 1558,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j3-9886m",
-      "Tüüp": "j3"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.3GHz",
-      "CORE COUNT": 16,
-      SOCKET: "7988S"
-    }
-  }
-}, {
-  id: 33,
-  type: "ram",
-  nimi: "11GB DDR3",
-  hind: 808,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "11GB DDR3",
-      "Moodulite arv": 8
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "11GB",
-      "Tüüp": "DDR3",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: []
-    }
-  }
-}, {
-  id: 34,
-  type: "cpu",
-  nimi: "j2-9306m",
-  hind: 4205,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j2-9306m",
-      "Tüüp": "j2"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.2GHz",
-      "CORE COUNT": 4,
-      SOCKET: "6194S"
-    }
-  }
-}, {
-  id: 35,
-  type: "cpu",
-  nimi: "j6-5348q,m",
-  hind: 2120,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j6-5348q,m",
-      "Tüüp": "j6"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.6GHz",
-      "CORE COUNT": 16,
-      SOCKET: "1667S"
-    }
-  }
-}, {
-  id: 36,
-  type: "cpu",
-  nimi: "j3-7572",
-  hind: 233,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j3-7572",
-      "Tüüp": "j3"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "3GHz",
-      "CORE COUNT": 8,
-      SOCKET: "5873S"
-    }
-  }
-}, {
-  id: 37,
-  type: "cpu",
-  nimi: "j7-6905",
-  hind: 889,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j7-6905",
-      "Tüüp": "j7"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.1GHz",
-      "CORE COUNT": 8,
-      SOCKET: "4146S"
-    }
-  }
-}, {
-  id: 38,
-  type: "gpu",
-  nimi: "GTX 8410",
-  hind: 4244,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1682,
-      "Graphics Clock (MHz)": 1357,
-      "Processor Clock (MHz)": 1554,
-      "Graphics Performance Score": 1770
-    },
-    "Memory Specs": {
-      "Memory Clock": "810 Gbps",
-      "Standard Memory Config": "9 GB GDDR2X",
-      "Memory Interface": "GDDR3",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["KUDA", "VR", "Anseel"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "3876x6280@169Hz",
-      "Standard Display Connectors": []
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 7,
-      Height: 4,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 94,
-      "Maximum Graphics Card Power (W)": 232,
-      "Minimum System Power Requirement (W)": 565,
-      "Supplementary Power Connectors": "6-pin"
-    }
-  }
-}, {
-  id: 39,
-  type: "ram",
-  nimi: "4GB DDR1",
-  hind: 902,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "4GB DDR1",
-      "Moodulite arv": 2
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "4GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: []
-    }
-  }
-}, {
-  id: 40,
-  type: "ram",
-  nimi: "8GB DDR1",
-  hind: 379,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "8GB DDR1",
-      "Moodulite arv": 2
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "8GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band"]
-    }
-  }
-}, {
-  id: 41,
-  type: "cpu",
-  nimi: "j4-9115m",
-  hind: 1961,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-9115m",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.2GHz",
-      "CORE COUNT": 4,
-      SOCKET: "7688S"
-    }
-  }
-}, {
-  id: 42,
-  type: "gpu",
-  nimi: "GTX 2830",
-  hind: 3599,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2036,
-      "Graphics Clock (MHz)": 1822,
-      "Processor Clock (MHz)": 2495,
-      "Graphics Performance Score": 1624
-    },
-    "Memory Specs": {
-      "Memory Clock": "910 Gbps",
-      "Standard Memory Config": "13 GB GDDR1X",
-      "Memory Interface": "GDDR3",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "PhysZ", "DirectX 12", "VR"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "666x3424@205Hz",
-      "Standard Display Connectors": ["HDMI 2.0b"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 3,
-      Height: 11,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 87,
-      "Maximum Graphics Card Power (W)": 444,
-      "Minimum System Power Requirement (W)": 942,
-      "Supplementary Power Connectors": "6-pin"
-    }
-  }
-}, {
-  id: 43,
-  type: "ram",
-  nimi: "26GB DDR1",
-  hind: 998,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "26GB DDR1",
-      "Moodulite arv": 1
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "26GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band"]
-    }
-  }
-}, {
-  id: 44,
-  type: "cpu",
-  nimi: "j7-7575h,q",
-  hind: 114,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j7-7575h,q",
-      "Tüüp": "j7"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.8GHz",
-      "CORE COUNT": 4,
-      SOCKET: "8409S"
-    }
-  }
-}, {
-  id: 45,
-  type: "gpu",
-  nimi: "GTX 2250",
-  hind: 834,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2195,
-      "Graphics Clock (MHz)": 2666,
-      "Processor Clock (MHz)": 2203,
-      "Graphics Performance Score": 2045
-    },
-    "Memory Specs": {
-      "Memory Clock": "510 Gbps",
-      "Standard Memory Config": "1 GB GDDR4X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["KUDA", "3D Vizion", "MVIDIA G-SYNC™", "GameRiver", "Anseel", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "980x129@236Hz",
-      "Standard Display Connectors": ["DP 1.42", "HDMI 2.0b", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 4,
-      Height: 14,
-      Width: "2-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 105,
-      "Maximum Graphics Card Power (W)": 261,
-      "Minimum System Power Requirement (W)": 835,
-      "Supplementary Power Connectors": "7-pin"
-    }
-  }
-}, {
-  id: 46,
-  type: "cpu",
-  nimi: "j5-4012m",
-  hind: 4176,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j5-4012m",
-      "Tüüp": "j5"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.5GHz",
-      "CORE COUNT": 8,
-      SOCKET: "4672S"
-    }
-  }
-}, {
-  id: 47,
-  type: "gpu",
-  nimi: "GTX 6270",
-  hind: 208,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2757,
-      "Graphics Clock (MHz)": 2198,
-      "Processor Clock (MHz)": 1525,
-      "Graphics Performance Score": 2140
-    },
-    "Memory Specs": {
-      "Memory Clock": "410 Gbps",
-      "Standard Memory Config": "4 GB GDDR1X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "3D Vizion", "ShadowWorking", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "5411x7132@25Hz",
-      "Standard Display Connectors": ["DP 1.42", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 6,
-      Height: 7,
-      Width: "1-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 116,
-      "Maximum Graphics Card Power (W)": 162,
-      "Minimum System Power Requirement (W)": 893,
-      "Supplementary Power Connectors": "4-pin"
-    }
-  }
-}, {
-  id: 48,
-  type: "ram",
-  nimi: "7GB DDR3",
-  hind: 149,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "7GB DDR3",
-      "Moodulite arv": 1
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "7GB",
-      "Tüüp": "DDR3",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Bubblewrap"]
-    }
-  }
-}, {
-  id: 49,
-  type: "ram",
-  nimi: "20GB DDR1",
-  hind: 167,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "20GB DDR1",
-      "Moodulite arv": 1
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "20GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Protective plastic", "Bubblewrap"]
-    }
-  }
-}, {
-  id: 50,
-  type: "cpu",
-  nimi: "j4-7344",
-  hind: 4758,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-7344",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.4GHz",
-      "CORE COUNT": 4,
-      SOCKET: "1295S"
-    }
-  }
-}, {
-  id: 51,
-  type: "gpu",
-  nimi: "GTX 4410",
-  hind: 1687,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2174,
-      "Graphics Clock (MHz)": 2516,
-      "Processor Clock (MHz)": 2458,
-      "Graphics Performance Score": 1187
-    },
-    "Memory Specs": {
-      "Memory Clock": "810 Gbps",
-      "Standard Memory Config": "5 GB GDDR4X",
-      "Memory Interface": "GDDR2",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "KUDA", "3D Vizion", "PhysZ", "MVIDIA G-SYNC™", "GameRiver", "ShadowWorking", "DirectX 12"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "7479x8317@149Hz",
-      "Standard Display Connectors": ["DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 4,
-      Height: 10,
-      Width: "1-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 65,
-      "Maximum Graphics Card Power (W)": 226,
-      "Minimum System Power Requirement (W)": 717,
-      "Supplementary Power Connectors": "7-pin"
-    }
-  }
-}, {
-  id: 52,
-  type: "gpu",
-  nimi: "GTX 8620",
-  hind: 1011,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2736,
-      "Graphics Clock (MHz)": 2307,
-      "Processor Clock (MHz)": 1919,
-      "Graphics Performance Score": 1846
-    },
-    "Memory Specs": {
-      "Memory Clock": "810 Gbps",
-      "Standard Memory Config": "8 GB GDDR2X",
-      "Memory Interface": "GDDR2",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "KUDA", "3D Vizion", "ShadowWorking", "VR", "Anseel", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "1552x9250@177Hz",
-      "Standard Display Connectors": ["HDMI 2.0b", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 8,
-      Height: 7,
-      Width: "2-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 82,
-      "Maximum Graphics Card Power (W)": 133,
-      "Minimum System Power Requirement (W)": 625,
-      "Supplementary Power Connectors": "4-pin"
-    }
-  }
-}, {
-  id: 53,
-  type: "gpu",
-  nimi: "GTX 5880",
-  hind: 211,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1274,
-      "Graphics Clock (MHz)": 1281,
-      "Processor Clock (MHz)": 2410,
-      "Graphics Performance Score": 2794
-    },
-    "Memory Specs": {
-      "Memory Clock": "910 Gbps",
-      "Standard Memory Config": "1 GB GDDR4X",
-      "Memory Interface": "GDDR3",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["SLI", "KUDA", "3D Vizion", "PhysZ", "MVIDIA G-SYNC™", "ShadowWorking", "DirectX 12", "Anseel", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "5780x9303@39Hz",
-      "Standard Display Connectors": ["DP 1.42", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 3,
-      Height: 6,
-      Width: "2-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 85,
-      "Maximum Graphics Card Power (W)": 109,
-      "Minimum System Power Requirement (W)": 545,
-      "Supplementary Power Connectors": "7-pin"
-    }
-  }
-}, {
-  id: 54,
-  type: "cpu",
-  nimi: "j1-9682",
-  hind: 3443,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j1-9682",
-      "Tüüp": "j1"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.8GHz",
-      "CORE COUNT": 2,
-      SOCKET: "7850S"
-    }
-  }
-}, {
-  id: 55,
-  type: "gpu",
-  nimi: "GTX 8830",
-  hind: 387,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1166,
-      "Graphics Clock (MHz)": 1956,
-      "Processor Clock (MHz)": 2292,
-      "Graphics Performance Score": 2627
-    },
-    "Memory Specs": {
-      "Memory Clock": "610 Gbps",
-      "Standard Memory Config": "2 GB GDDR4X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["SLI", "KUDA", "MVIDIA G-SYNC™", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "5751x6371@83Hz",
-      "Standard Display Connectors": ["DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 14,
-      Height: 5,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 92,
-      "Maximum Graphics Card Power (W)": 484,
-      "Minimum System Power Requirement (W)": 624,
-      "Supplementary Power Connectors": "6-pin"
-    }
-  }
-}, {
-  id: 56,
-  type: "ram",
-  nimi: "11GB DDR1",
-  hind: 244,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "11GB DDR1",
-      "Moodulite arv": 2
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "11GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Protective plastic", "-10% off coupon"]
-    }
-  }
-}, {
-  id: 57,
-  type: "cpu",
-  nimi: "j4-7431m",
-  hind: 4659,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-7431m",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.9GHz",
-      "CORE COUNT": 1,
-      SOCKET: "5427S"
-    }
-  }
-}, {
-  id: 58,
-  type: "cpu",
-  nimi: "j5-3947",
-  hind: 314,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j5-3947",
-      "Tüüp": "j5"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.4GHz",
-      "CORE COUNT": 8,
-      SOCKET: "6052S"
-    }
-  }
-}, {
-  id: 59,
-  type: "ram",
-  nimi: "31GB DDR1",
-  hind: 733,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "31GB DDR1",
-      "Moodulite arv": 2
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "31GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band"]
-    }
-  }
-}, {
-  id: 60,
-  type: "cpu",
-  nimi: "j6-7749",
-  hind: 366,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j6-7749",
-      "Tüüp": "j6"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "3.1GHz",
-      "CORE COUNT": 16,
-      SOCKET: "3009S"
-    }
-  }
-}, {
-  id: 61,
-  type: "ram",
-  nimi: "14GB DDR1",
-  hind: 766,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "14GB DDR1",
-      "Moodulite arv": 8
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "14GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: []
-    }
-  }
-}, {
-  id: 62,
-  type: "cpu",
-  nimi: "j2-4284",
-  hind: 3697,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j2-4284",
-      "Tüüp": "j2"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.4GHz",
-      "CORE COUNT": 8,
-      SOCKET: "6149S"
-    }
-  }
-}, {
-  id: 63,
-  type: "ram",
-  nimi: "28GB DDR2",
-  hind: 480,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "28GB DDR2",
-      "Moodulite arv": 2
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "28GB",
-      "Tüüp": "DDR2",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band"]
-    }
-  }
-}, {
-  id: 64,
-  type: "cpu",
-  nimi: "j6-8563k",
-  hind: 1712,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j6-8563k",
-      "Tüüp": "j6"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "3.1GHz",
-      "CORE COUNT": 16,
-      SOCKET: "5841S"
-    }
-  }
-}, {
-  id: 65,
-  type: "gpu",
-  nimi: "GTX 1610",
-  hind: 1540,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2697,
-      "Graphics Clock (MHz)": 2883,
-      "Processor Clock (MHz)": 2094,
-      "Graphics Performance Score": 1124
-    },
-    "Memory Specs": {
-      "Memory Clock": "310 Gbps",
-      "Standard Memory Config": "7 GB GDDR2X",
-      "Memory Interface": "GDDR4",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "KUDA", "3D Vizion", "DirectX 12", "Anseel", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "4746x1945@122Hz",
-      "Standard Display Connectors": []
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 5,
-      Height: 13,
-      Width: "2-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 102,
-      "Maximum Graphics Card Power (W)": 78,
-      "Minimum System Power Requirement (W)": 834,
-      "Supplementary Power Connectors": "7-pin"
-    }
-  }
-}, {
-  id: 66,
-  type: "cpu",
-  nimi: "j7-6052h,q",
-  hind: 4254,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j7-6052h,q",
-      "Tüüp": "j7"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.3GHz",
-      "CORE COUNT": 4,
-      SOCKET: "5352S"
-    }
-  }
-}, {
-  id: 67,
-  type: "cpu",
-  nimi: "j6-5044k,h",
-  hind: 3091,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j6-5044k,h",
-      "Tüüp": "j6"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "3.5GHz",
-      "CORE COUNT": 4,
-      SOCKET: "6939S"
-    }
-  }
-}, {
-  id: 68,
-  type: "ram",
-  nimi: "2GB DDR1",
-  hind: 643,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "2GB DDR1",
-      "Moodulite arv": 8
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "2GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band", "Protective plastic", "-10% off coupon"]
-    }
-  }
-}, {
-  id: 69,
-  type: "cpu",
-  nimi: "j8-7216m",
-  hind: 2424,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j8-7216m",
-      "Tüüp": "j8"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.2GHz",
-      "CORE COUNT": 2,
-      SOCKET: "2660S"
-    }
-  }
-}, {
-  id: 70,
-  type: "ram",
-  nimi: "8GB DDR1",
-  hind: 754,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "8GB DDR1",
-      "Moodulite arv": 4
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "8GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Protective plastic", "Bubblewrap"]
-    }
-  }
-}, {
-  id: 71,
-  type: "gpu",
-  nimi: "GTX 7310",
-  hind: 1684,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2363,
-      "Graphics Clock (MHz)": 2311,
-      "Processor Clock (MHz)": 1411,
-      "Graphics Performance Score": 1727
-    },
-    "Memory Specs": {
-      "Memory Clock": "510 Gbps",
-      "Standard Memory Config": "5 GB GDDR3X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["KUDA", "PhysZ", "GameRiver", "ShadowWorking", "VR", "Anseel"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "5386x2135@69Hz",
-      "Standard Display Connectors": ["DP 1.42"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 2,
-      Height: 1,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 98,
-      "Maximum Graphics Card Power (W)": 285,
-      "Minimum System Power Requirement (W)": 631,
-      "Supplementary Power Connectors": "5-pin"
-    }
-  }
-}, {
-  id: 72,
-  type: "cpu",
-  nimi: "j4-9201h,q,m",
-  hind: 233,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-9201h,q,m",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "3.2GHz",
-      "CORE COUNT": 16,
-      SOCKET: "5303S"
-    }
-  }
-}, {
-  id: 73,
-  type: "ram",
-  nimi: "19GB DDR1",
-  hind: 708,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "19GB DDR1",
-      "Moodulite arv": 4
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "19GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band", "Protective plastic"]
-    }
-  }
-}, {
-  id: 74,
-  type: "gpu",
-  nimi: "GTX 1760",
-  hind: 2232,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1422,
-      "Graphics Clock (MHz)": 1950,
-      "Processor Clock (MHz)": 2366,
-      "Graphics Performance Score": 1343
-    },
-    "Memory Specs": {
-      "Memory Clock": "710 Gbps",
-      "Standard Memory Config": "15 GB GDDR2X",
-      "Memory Interface": "GDDR2",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["KUDA", "3D Vizion", "PhysZ", "GameRiver", "ShadowWorking", "DirectX 12", "VR", "Anseel"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "7094x3318@189Hz",
-      "Standard Display Connectors": ["HDMI 2.0b"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 1,
-      Height: 14,
-      Width: "1-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 61,
-      "Maximum Graphics Card Power (W)": 120,
-      "Minimum System Power Requirement (W)": 816,
-      "Supplementary Power Connectors": "4-pin"
-    }
-  }
-}, {
-  id: 75,
-  type: "cpu",
-  nimi: "j7-4534",
-  hind: 1545,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j7-4534",
-      "Tüüp": "j7"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.9GHz",
-      "CORE COUNT": 16,
-      SOCKET: "7504S"
-    }
-  }
-}, {
-  id: 76,
-  type: "gpu",
-  nimi: "GTX 4730",
-  hind: 2637,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1850,
-      "Graphics Clock (MHz)": 1500,
-      "Processor Clock (MHz)": 2011,
-      "Graphics Performance Score": 1396
-    },
-    "Memory Specs": {
-      "Memory Clock": "410 Gbps",
-      "Standard Memory Config": "4 GB GDDR4X",
-      "Memory Interface": "GDDR4",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "KUDA", "3D Vizion", "DirectX 12", "VR"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "7148x5694@13Hz",
-      "Standard Display Connectors": ["HDMI 2.0b"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 5,
-      Height: 8,
-      Width: "1-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 97,
-      "Maximum Graphics Card Power (W)": 77,
-      "Minimum System Power Requirement (W)": 891,
-      "Supplementary Power Connectors": "7-pin"
-    }
-  }
-}, {
-  id: 77,
-  type: "cpu",
-  nimi: "j1-4506",
-  hind: 1388,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j1-4506",
-      "Tüüp": "j1"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.1GHz",
-      "CORE COUNT": 16,
-      SOCKET: "2830S"
-    }
-  }
-}, {
-  id: 78,
-  type: "gpu",
-  nimi: "GTX 7560",
-  hind: 1572,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1566,
-      "Graphics Clock (MHz)": 1409,
-      "Processor Clock (MHz)": 2269,
-      "Graphics Performance Score": 1853
-    },
-    "Memory Specs": {
-      "Memory Clock": "410 Gbps",
-      "Standard Memory Config": "4 GB GDDR2X",
-      "Memory Interface": "GDDR3",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "KUDA", "PhysZ", "MVIDIA G-SYNC™", "GameRiver", "VR", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "4792x8112@190Hz",
-      "Standard Display Connectors": []
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 5,
-      Height: 10,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 84,
-      "Maximum Graphics Card Power (W)": 314,
-      "Minimum System Power Requirement (W)": 838,
-      "Supplementary Power Connectors": "6-pin"
-    }
-  }
-}, {
-  id: 79,
-  type: "gpu",
-  nimi: "GTX 7510",
-  hind: 1600,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1712,
-      "Graphics Clock (MHz)": 1229,
-      "Processor Clock (MHz)": 1867,
-      "Graphics Performance Score": 1044
-    },
-    "Memory Specs": {
-      "Memory Clock": "710 Gbps",
-      "Standard Memory Config": "9 GB GDDR4X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["SLI", "3D Vizion", "PhysZ", "MVIDIA G-SYNC™", "DirectX 12", "Anseel"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "9074x1028@228Hz",
-      "Standard Display Connectors": ["HDMI 2.0b"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 2,
-      Height: 6,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 71,
-      "Maximum Graphics Card Power (W)": 381,
-      "Minimum System Power Requirement (W)": 537,
-      "Supplementary Power Connectors": "5-pin"
-    }
-  }
-}, {
-  id: 80,
-  type: "cpu",
-  nimi: "j6-3478",
-  hind: 1321,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j6-3478",
-      "Tüüp": "j6"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.3GHz",
-      "CORE COUNT": 1,
-      SOCKET: "1542S"
-    }
-  }
-}, {
-  id: 81,
-  type: "cpu",
-  nimi: "j4-9236",
-  hind: 4100,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-9236",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "3.4GHz",
-      "CORE COUNT": 8,
-      SOCKET: "3467S"
-    }
-  }
-}, {
-  id: 82,
-  type: "ram",
-  nimi: "13GB DDR3",
-  hind: 673,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "13GB DDR3",
-      "Moodulite arv": 8
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "13GB",
-      "Tüüp": "DDR3",
-      Voltage: "1.2v LOW VOLTAGE"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Protective plastic"]
-    }
-  }
-}, {
-  id: 83,
-  type: "gpu",
-  nimi: "GTX 5460",
-  hind: 2227,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1047,
-      "Graphics Clock (MHz)": 2341,
-      "Processor Clock (MHz)": 2467,
-      "Graphics Performance Score": 1786
-    },
-    "Memory Specs": {
-      "Memory Clock": "810 Gbps",
-      "Standard Memory Config": "2 GB GDDR2X",
-      "Memory Interface": "GDDR3",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "3D Vizion", "PhysZ"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "6352x4438@179Hz",
-      "Standard Display Connectors": ["DP 1.42", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 2,
-      Height: 6,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 102,
-      "Maximum Graphics Card Power (W)": 308,
-      "Minimum System Power Requirement (W)": 599,
-      "Supplementary Power Connectors": "5-pin"
-    }
-  }
-}, {
-  id: 84,
-  type: "ram",
-  nimi: "9GB DDR2",
-  hind: 864,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "RIPEJAW",
-      Nimi: "9GB DDR2",
-      "Moodulite arv": 4
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "9GB",
-      "Tüüp": "DDR2",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Bubblewrap", "-10% off coupon"]
-    }
-  }
-}, {
-  id: 85,
-  type: "gpu",
-  nimi: "GTX 6220",
-  hind: 2026,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1884,
-      "Graphics Clock (MHz)": 2094,
-      "Processor Clock (MHz)": 1205,
-      "Graphics Performance Score": 2853
-    },
-    "Memory Specs": {
-      "Memory Clock": "610 Gbps",
-      "Standard Memory Config": "3 GB GDDR4X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["3D Vizion", "Anseel"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "8183x8900@141Hz",
-      "Standard Display Connectors": ["DP 1.42"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 12,
-      Height: 4,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 96,
-      "Maximum Graphics Card Power (W)": 371,
-      "Minimum System Power Requirement (W)": 942,
-      "Supplementary Power Connectors": "5-pin"
-    }
-  }
-}, {
-  id: 86,
-  type: "gpu",
-  nimi: "GTX 3410",
-  hind: 869,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1336,
-      "Graphics Clock (MHz)": 1430,
-      "Processor Clock (MHz)": 2607,
-      "Graphics Performance Score": 2575
-    },
-    "Memory Specs": {
-      "Memory Clock": "610 Gbps",
-      "Standard Memory Config": "8 GB GDDR3X",
-      "Memory Interface": "GDDR2",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["SLI", "KUDA", "PhysZ", "MVIDIA G-SYNC™", "ShadowWorking", "VR", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "6146x5@223Hz",
-      "Standard Display Connectors": ["HDMI 2.0b"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 3,
-      Height: 8,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 89,
-      "Maximum Graphics Card Power (W)": 133,
-      "Minimum System Power Requirement (W)": 625,
-      "Supplementary Power Connectors": "7-pin"
-    }
-  }
-}, {
-  id: 87,
-  type: "cpu",
-  nimi: "j4-5759",
-  hind: 1760,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-5759",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2GHz",
-      "CORE COUNT": 8,
-      SOCKET: "9255S"
-    }
-  }
-}, {
-  id: 88,
-  type: "ram",
-  nimi: "27GB DDR1",
-  hind: 287,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "CRUCAL",
-      Nimi: "27GB DDR1",
-      "Moodulite arv": 4
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "27GB",
-      "Tüüp": "DDR1",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band"]
-    }
-  }
-}, {
-  id: 89,
-  type: "cpu",
-  nimi: "j4-2794k,m",
-  hind: 2105,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-2794k,m",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "2.1GHz",
-      "CORE COUNT": 1,
-      SOCKET: "7131S"
-    }
-  }
-}, {
-  id: 90,
-  type: "gpu",
-  nimi: "GTX 4160",
-  hind: 3458,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2761,
-      "Graphics Clock (MHz)": 1909,
-      "Processor Clock (MHz)": 1812,
-      "Graphics Performance Score": 1268
-    },
-    "Memory Specs": {
-      "Memory Clock": "810 Gbps",
-      "Standard Memory Config": "11 GB GDDR4X",
-      "Memory Interface": "GDDR2",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["SLI", "KUDA", "PhysZ", "MVIDIA G-SYNC™", "ShadowWorking", "DirectX 12", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "787x431@61Hz",
-      "Standard Display Connectors": ["HDMI 2.0b"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 9,
-      Height: 6,
-      Width: "2-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 94,
-      "Maximum Graphics Card Power (W)": 160,
-      "Minimum System Power Requirement (W)": 688,
-      "Supplementary Power Connectors": "5-pin"
-    }
-  }
-}, {
-  id: 91,
-  type: "gpu",
-  nimi: "GTX 6770",
-  hind: 4005,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2833,
-      "Graphics Clock (MHz)": 1660,
-      "Processor Clock (MHz)": 1106,
-      "Graphics Performance Score": 2741
-    },
-    "Memory Specs": {
-      "Memory Clock": "510 Gbps",
-      "Standard Memory Config": "11 GB GDDR3X",
-      "Memory Interface": "GDDR4",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 1.0",
-      "Supported Technologies": ["SLI", "3D Vizion", "ShadowWorking", "VR", "Anseel"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "1035x4705@154Hz",
-      "Standard Display Connectors": []
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 3,
-      Height: 13,
-      Width: "3-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 88,
-      "Maximum Graphics Card Power (W)": 152,
-      "Minimum System Power Requirement (W)": 500,
-      "Supplementary Power Connectors": "7-pin"
-    }
-  }
-}, {
-  id: 92,
-  type: "gpu",
-  nimi: "GTX 7180",
-  hind: 2964,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2072,
-      "Graphics Clock (MHz)": 1312,
-      "Processor Clock (MHz)": 2331,
-      "Graphics Performance Score": 1293
-    },
-    "Memory Specs": {
-      "Memory Clock": "610 Gbps",
-      "Standard Memory Config": "9 GB GDDR1X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["KUDA", "PhysZ"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "4012x8503@183Hz",
-      "Standard Display Connectors": ["HDMI 2.0b"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 7,
-      Height: 7,
-      Width: "2-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 60,
-      "Maximum Graphics Card Power (W)": 496,
-      "Minimum System Power Requirement (W)": 689,
-      "Supplementary Power Connectors": "7-pin"
-    }
-  }
-}, {
-  id: 93,
-  type: "gpu",
-  nimi: "GTX 6750",
-  hind: 3974,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 2030,
-      "Graphics Clock (MHz)": 2317,
-      "Processor Clock (MHz)": 2872,
-      "Graphics Performance Score": 1869
-    },
-    "Memory Specs": {
-      "Memory Clock": "510 Gbps",
-      "Standard Memory Config": "3 GB GDDR4X",
-      "Memory Interface": "GDDR1",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "KUDA", "3D Vizion", "MVIDIA G-SYNC™", "VR", "MVIDIA WhisperMode"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "1845x879@129Hz",
-      "Standard Display Connectors": ["DP 1.42", "HDMI 2.0b", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 3,
-      Height: 1,
-      Width: "2-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 117,
-      "Maximum Graphics Card Power (W)": 99,
-      "Minimum System Power Requirement (W)": 700,
-      "Supplementary Power Connectors": "7-pin"
-    }
-  }
-}, {
-  id: 94,
-  type: "cpu",
-  nimi: "j4-8601h",
-  hind: 627,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j4-8601h",
-      "Tüüp": "j4"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.4GHz",
-      "CORE COUNT": 8,
-      SOCKET: "8353S"
-    }
-  }
-}, {
-  id: 95,
-  type: "ram",
-  nimi: "19GB DDR2",
-  hind: 759,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "19GB DDR2",
-      "Moodulite arv": 2
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "19GB",
-      "Tüüp": "DDR2",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Protective plastic"]
-    }
-  }
-}, {
-  id: 96,
-  type: "gpu",
-  nimi: "GTX 2760",
-  hind: 3349,
-  pilt: "pildid/gpu.png",
-  specs: {
-    "GPU ENGINE SPECS": {
-      "CUDA Cores": 1649,
-      "Graphics Clock (MHz)": 2901,
-      "Processor Clock (MHz)": 2496,
-      "Graphics Performance Score": 2279
-    },
-    "Memory Specs": {
-      "Memory Clock": "510 Gbps",
-      "Standard Memory Config": "1 GB GDDR1X",
-      "Memory Interface": "GDDR4",
-      "Memory Interface Width": "256-bit"
-    },
-    "Feature Support": {
-      "Bus Support": "PCIe 2.0",
-      "Supported Technologies": ["SLI", "KUDA", "MVIDIA G-SYNC™", "DirectX 12"]
-    },
-    "Display Support": {
-      "Maximum Digital Resolution": "9861x7414@223Hz",
-      "Standard Display Connectors": ["DP 1.42", "HDMI 2.0b", "DL-DVI"]
-    },
-    "Standard Graphics Card Dimensions": {
-      Length: 3,
-      Height: 9,
-      Width: "1-slot"
-    },
-    "Thermal and Power Specs": {
-      "Maximum GPU Temperature (in C)": 115,
-      "Maximum Graphics Card Power (W)": 51,
-      "Minimum System Power Requirement (W)": 912,
-      "Supplementary Power Connectors": "6-pin"
-    }
-  }
-}, {
-  id: 97,
-  type: "ram",
-  nimi: "12GB DDR2",
-  hind: 804,
-  pilt: "pildid/ram.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "SAMSING",
-      Nimi: "12GB DDR2",
-      "Moodulite arv": 1
-    },
-    "TEHNIILISED NÄITAJAD": {
-      Maht: "12GB",
-      "Tüüp": "DDR2",
-      Voltage: "1.5v"
-    },
-    "ERIMÄRKUSED": {
-      Lisad: ["Anti-Static band", "Bubblewrap", "-10% off coupon"]
-    }
-  }
-}, {
-  id: 98,
-  type: "cpu",
-  nimi: "j3-6180h,m",
-  hind: 2690,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j3-6180h,m",
-      "Tüüp": "j3"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "1.1GHz",
-      "CORE COUNT": 1,
-      SOCKET: "2685S"
-    }
-  }
-}, {
-  id: 99,
-  type: "cpu",
-  nimi: "j3-6608",
-  hind: 1206,
-  pilt: "pildid/cpu.png",
-  specs: {
-    "ÜLDNÄITAJAD": {
-      Tootja: "jntel",
-      Nimi: "j3-6608",
-      "Tüüp": "j3"
-    },
-    "TEHINILISED NÄITAJAD": {
-      "CPU CLOCK": "3.1GHz",
-      "CORE COUNT": 1,
-      SOCKET: "9154S"
-    }
-  }
-}];
+const tooted = [
+    {
+        "id": 0,
+        "type": "cpu",
+        "nimi": "Intel i3-5780",
+        "hind": 1772,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i3-5780",
+                "Tüüp": "i3",
+                "Mudel": "5780"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.2GHz",
+                "CORE COUNT": 16,
+                "SOCKET": "6129S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, VT-x, Speedstep, AES"
+            }
+        }
+    },
+    {
+        "id": 1,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 7 1600",
+        "hind": 196,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 7 1600",
+                "Tüüp": "Ryzen7",
+                "Mudel": "1600"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2.9GHz",
+                "CORE COUNT": 4,
+                "SOCKET": "7012S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, SMT, AES, AVX2, VR READY"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "type": "gpu",
+        "nimi": "GTX 2750",
+        "hind": 2948,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1292,
+                "Graphics Clock (MHz)": 2819,
+                "Processor Clock (MHz)": 2545,
+                "Graphics Performance Score": 1988
+            },
+            "Memory Specs": {
+                "Memory Clock": "610 Gbps",
+                "Standard Memory Config": "3 GB GDDR3X",
+                "Memory Interface": "GDDR1",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "SLI, KUDA, 3D Vizion, MVIDIA G-SYNC™"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "6747x2097@159Hz",
+                "Standard Display Connectors": "DP 1.42, HDMI 2.0b"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 11,
+                "Height": 1,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 87,
+                "Maximum Graphics Card Power (W)": 422,
+                "Minimum System Power Requirement (W)": 764,
+                "Supplementary Power Connectors": "5-pin"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "type": "ram",
+        "nimi": "G.SKILL 32GB DDR1",
+        "hind": 979,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "G.SKILL",
+                "Nimi": "G.SKILL 32GB DDR1",
+                "Moodulite arv": 1
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "32GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1500MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "NON-ECC unbuffered, EEC, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 4,
+        "type": "ram",
+        "nimi": "Kingston 1GB DDR1",
+        "hind": 111,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Kingston",
+                "Nimi": "Kingston 1GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "1GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.5v",
+                "Siini kiirus": "2100MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, RGB LED"
+            }
+        }
+    },
+    {
+        "id": 5,
+        "type": "gpu",
+        "nimi": "GTX 7460",
+        "hind": 3870,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1483,
+                "Graphics Clock (MHz)": 2805,
+                "Processor Clock (MHz)": 2964,
+                "Graphics Performance Score": 1869
+            },
+            "Memory Specs": {
+                "Memory Clock": "310 Gbps",
+                "Standard Memory Config": "12 GB GDDR1X",
+                "Memory Interface": "GDDR3",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "KUDA, MVIDIA G-SYNC™, ShadowWorking, VR, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "7199x7990@167Hz",
+                "Standard Display Connectors": "DP 1.42"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 3,
+                "Height": 10,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 106,
+                "Maximum Graphics Card Power (W)": 31,
+                "Minimum System Power Requirement (W)": 679,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 6,
+        "type": "ram",
+        "nimi": "Kingston 18GB DDR1",
+        "hind": 469,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Kingston",
+                "Nimi": "Kingston 18GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "18GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "2100MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, Heat sink, EEC, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 7,
+        "type": "cpu",
+        "nimi": "Intel i5-4550",
+        "hind": 1895,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i5-4550",
+                "Tüüp": "i5",
+                "Mudel": "4550"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2.9GHz",
+                "CORE COUNT": 2,
+                "SOCKET": "3935S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Hyperthreading, VT-x, Speedstep"
+            }
+        }
+    },
+    {
+        "id": 8,
+        "type": "ram",
+        "nimi": "Silicon Power 24GB DDR1",
+        "hind": 278,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Silicon Power",
+                "Nimi": "Silicon Power 24GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "24GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "2100MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, EEC, RGB LED"
+            }
+        }
+    },
+    {
+        "id": 9,
+        "type": "ram",
+        "nimi": "Silicon Power 24GB DDR1",
+        "hind": 159,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Silicon Power",
+                "Nimi": "Silicon Power 24GB DDR1",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "24GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1900MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, Heat sink, EEC"
+            }
+        }
+    },
+    {
+        "id": 10,
+        "type": "gpu",
+        "nimi": "GTX 6510",
+        "hind": 640,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1042,
+                "Graphics Clock (MHz)": 1632,
+                "Processor Clock (MHz)": 2492,
+                "Graphics Performance Score": 2646
+            },
+            "Memory Specs": {
+                "Memory Clock": "310 Gbps",
+                "Standard Memory Config": "12 GB GDDR3X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "KUDA, GameRiver, ShadowWorking, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "2596x1056@60Hz",
+                "Standard Display Connectors": "HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 2,
+                "Height": 5,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 87,
+                "Maximum Graphics Card Power (W)": 237,
+                "Minimum System Power Requirement (W)": 757,
+                "Supplementary Power Connectors": "4-pin"
+            }
+        }
+    },
+    {
+        "id": 11,
+        "type": "ram",
+        "nimi": "Kingston 128GB DDR2",
+        "hind": 917,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Kingston",
+                "Nimi": "Kingston 128GB DDR2",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "128GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1400MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "NON-ECC unbuffered, Heat sink"
+            }
+        }
+    },
+    {
+        "id": 12,
+        "type": "ram",
+        "nimi": "Goodram 28GB DDR2",
+        "hind": 996,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Goodram",
+                "Nimi": "Goodram 28GB DDR2",
+                "Moodulite arv": 1
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "28GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1300MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, EEC, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 13,
+        "type": "gpu",
+        "nimi": "GTX 2450",
+        "hind": 1694,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2579,
+                "Graphics Clock (MHz)": 1525,
+                "Processor Clock (MHz)": 1444,
+                "Graphics Performance Score": 1729
+            },
+            "Memory Specs": {
+                "Memory Clock": "910 Gbps",
+                "Standard Memory Config": "12 GB GDDR4X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "PhysZ, MVIDIA G-SYNC™, GameRiver, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "8627x660@126Hz",
+                "Standard Display Connectors": "HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 10,
+                "Height": 7,
+                "Width": "1-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 105,
+                "Maximum Graphics Card Power (W)": 379,
+                "Minimum System Power Requirement (W)": 830,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 14,
+        "type": "gpu",
+        "nimi": "GTX 2320",
+        "hind": 550,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2941,
+                "Graphics Clock (MHz)": 1340,
+                "Processor Clock (MHz)": 1898,
+                "Graphics Performance Score": 2130
+            },
+            "Memory Specs": {
+                "Memory Clock": "710 Gbps",
+                "Standard Memory Config": "10 GB GDDR4X",
+                "Memory Interface": "GDDR3",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "SLI, 3D Vizion, PhysZ, MVIDIA G-SYNC™, DirectX 12, Anseel"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "2845x316@152Hz",
+                "Standard Display Connectors": "DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 5,
+                "Height": 14,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 72,
+                "Maximum Graphics Card Power (W)": 314,
+                "Minimum System Power Requirement (W)": 583,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 15,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 3 1400",
+        "hind": 578,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 3 1400",
+                "Tüüp": "Ryzen3",
+                "Mudel": "1400"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.7GHz",
+                "CORE COUNT": 2,
+                "SOCKET": "6020S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 16,
+        "type": "ram",
+        "nimi": "Crosair 12GB DDR3",
+        "hind": 123,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crosair",
+                "Nimi": "Crosair 12GB DDR3",
+                "Moodulite arv": 2
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "12GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1700MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink"
+            }
+        }
+    },
+    {
+        "id": 17,
+        "type": "gpu",
+        "nimi": "GTX 1180",
+        "hind": 1072,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2670,
+                "Graphics Clock (MHz)": 1200,
+                "Processor Clock (MHz)": 2853,
+                "Graphics Performance Score": 1583
+            },
+            "Memory Specs": {
+                "Memory Clock": "210 Gbps",
+                "Standard Memory Config": "7 GB GDDR4X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "KUDA, 3D Vizion, PhysZ, ShadowWorking, DirectX 12, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "259x1193@90Hz",
+                "Standard Display Connectors": "DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 12,
+                "Height": 7,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 79,
+                "Maximum Graphics Card Power (W)": 407,
+                "Minimum System Power Requirement (W)": 645,
+                "Supplementary Power Connectors": "5-pin"
+            }
+        }
+    },
+    {
+        "id": 18,
+        "type": "ram",
+        "nimi": "Kingston 28GB DDR1",
+        "hind": 333,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Kingston",
+                "Nimi": "Kingston 28GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "28GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1700MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, EEC"
+            }
+        }
+    },
+    {
+        "id": 19,
+        "type": "ram",
+        "nimi": "Crucial 12GB DDR3",
+        "hind": 615,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crucial",
+                "Nimi": "Crucial 12GB DDR3",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "12GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1400MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, EEC, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 20,
+        "type": "ram",
+        "nimi": "Dell 4GB DDR1",
+        "hind": 722,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Dell",
+                "Nimi": "Dell 4GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "4GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1900MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, EEC, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 21,
+        "type": "cpu",
+        "nimi": "Intel i9-9670hm",
+        "hind": 786,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i9-9670hm",
+                "Tüüp": "i9",
+                "Mudel": "9670hm"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "3.2GHz",
+                "CORE COUNT": 2,
+                "SOCKET": "2888S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, Hyperthreading, Speedstep, AES"
+            }
+        }
+    },
+    {
+        "id": 22,
+        "type": "gpu",
+        "nimi": "GTX 1140",
+        "hind": 3793,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2981,
+                "Graphics Clock (MHz)": 1531,
+                "Processor Clock (MHz)": 1891,
+                "Graphics Performance Score": 1006
+            },
+            "Memory Specs": {
+                "Memory Clock": "210 Gbps",
+                "Standard Memory Config": "12 GB GDDR3X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "SLI, KUDA"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "2848x6291@202Hz",
+                "Standard Display Connectors": "HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 2,
+                "Height": 10,
+                "Width": "1-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 90,
+                "Maximum Graphics Card Power (W)": 418,
+                "Minimum System Power Requirement (W)": 561,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 23,
+        "type": "gpu",
+        "nimi": "GTX 6850",
+        "hind": 864,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1281,
+                "Graphics Clock (MHz)": 1030,
+                "Processor Clock (MHz)": 1898,
+                "Graphics Performance Score": 2041
+            },
+            "Memory Specs": {
+                "Memory Clock": "710 Gbps",
+                "Standard Memory Config": "5 GB GDDR2X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "SLI, 3D Vizion, PhysZ, Anseel"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "5244x8835@178Hz",
+                "Standard Display Connectors": "DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 13,
+                "Height": 9,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 82,
+                "Maximum Graphics Card Power (W)": 475,
+                "Minimum System Power Requirement (W)": 887,
+                "Supplementary Power Connectors": "5-pin"
+            }
+        }
+    },
+    {
+        "id": 24,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 7 1300X",
+        "hind": 411,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 7 1300X",
+                "Tüüp": "Ryzen7",
+                "Mudel": "1300X"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.4GHz",
+                "CORE COUNT": 8,
+                "SOCKET": "9870S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "SMT, AES, AVX2, FMA3, VR READY"
+            }
+        }
+    },
+    {
+        "id": 25,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 3 Pro 1500",
+        "hind": 323,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 3 Pro 1500",
+                "Tüüp": "Ryzen3",
+                "Mudel": "1500"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "3GHz",
+                "CORE COUNT": 1,
+                "SOCKET": "4931S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "SMT, AES, AVX2, FMA3, VR READY"
+            }
+        }
+    },
+    {
+        "id": 26,
+        "type": "cpu",
+        "nimi": "Intel i9-7690m",
+        "hind": 1915,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i9-7690m",
+                "Tüüp": "i9",
+                "Mudel": "7690m"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2.1GHz",
+                "CORE COUNT": 4,
+                "SOCKET": "5712S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Hyperthreading, VT-x, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 27,
+        "type": "gpu",
+        "nimi": "GTX 6760",
+        "hind": 116,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1749,
+                "Graphics Clock (MHz)": 2052,
+                "Processor Clock (MHz)": 1170,
+                "Graphics Performance Score": 1914
+            },
+            "Memory Specs": {
+                "Memory Clock": "610 Gbps",
+                "Standard Memory Config": "4 GB GDDR1X",
+                "Memory Interface": "GDDR4",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "SLI, KUDA, 3D Vizion, GameRiver, ShadowWorking, DirectX 12, VR, Anseel, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "1665x7111@123Hz",
+                "Standard Display Connectors": "DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 7,
+                "Height": 3,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 66,
+                "Maximum Graphics Card Power (W)": 158,
+                "Minimum System Power Requirement (W)": 958,
+                "Supplementary Power Connectors": "5-pin"
+            }
+        }
+    },
+    {
+        "id": 28,
+        "type": "gpu",
+        "nimi": "GTX 7140",
+        "hind": 1100,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1548,
+                "Graphics Clock (MHz)": 1758,
+                "Processor Clock (MHz)": 2910,
+                "Graphics Performance Score": 2032
+            },
+            "Memory Specs": {
+                "Memory Clock": "710 Gbps",
+                "Standard Memory Config": "13 GB GDDR2X",
+                "Memory Interface": "GDDR1",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "KUDA, 3D Vizion"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "5679x5956@22Hz",
+                "Standard Display Connectors": "DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 4,
+                "Height": 9,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 109,
+                "Maximum Graphics Card Power (W)": 306,
+                "Minimum System Power Requirement (W)": 705,
+                "Supplementary Power Connectors": "5-pin"
+            }
+        }
+    },
+    {
+        "id": 29,
+        "type": "ram",
+        "nimi": "Silicon Power 16GB DDR1",
+        "hind": 412,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Silicon Power",
+                "Nimi": "Silicon Power 16GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "16GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.5v",
+                "Siini kiirus": "2000MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, Heat sink, EEC, RGB LED"
+            }
+        }
+    },
+    {
+        "id": 30,
+        "type": "ram",
+        "nimi": "A-Data 28GB DDR3",
+        "hind": 918,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "A-Data",
+                "Nimi": "A-Data 28GB DDR3",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "28GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "2200MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "NON-ECC unbuffered, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 31,
+        "type": "gpu",
+        "nimi": "GTX 7430",
+        "hind": 1319,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2029,
+                "Graphics Clock (MHz)": 1284,
+                "Processor Clock (MHz)": 2718,
+                "Graphics Performance Score": 1848
+            },
+            "Memory Specs": {
+                "Memory Clock": "910 Gbps",
+                "Standard Memory Config": "3 GB GDDR1X",
+                "Memory Interface": "GDDR1",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "SLI, 3D Vizion, PhysZ, MVIDIA G-SYNC™, DirectX 12, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "6961x5440@129Hz",
+                "Standard Display Connectors": "HDMI 2.0b"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 2,
+                "Height": 9,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 88,
+                "Maximum Graphics Card Power (W)": 38,
+                "Minimum System Power Requirement (W)": 646,
+                "Supplementary Power Connectors": "6-pin"
+            }
+        }
+    },
+    {
+        "id": 32,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 7 Pro 1700X",
+        "hind": 272,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 7 Pro 1700X",
+                "Tüüp": "Ryzen7",
+                "Mudel": "1700X"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.8GHz",
+                "CORE COUNT": 1,
+                "SOCKET": "8358S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, AVX2, FMA3"
+            }
+        }
+    },
+    {
+        "id": 33,
+        "type": "ram",
+        "nimi": "Crucial 32GB DDR3",
+        "hind": 954,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crucial",
+                "Nimi": "Crucial 32GB DDR3",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "32GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1900MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, Heat sink, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 34,
+        "type": "ram",
+        "nimi": "Samsung 4GB DDR2",
+        "hind": 398,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Samsung",
+                "Nimi": "Samsung 4GB DDR2",
+                "Moodulite arv": 1
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "4GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1300MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, EEC, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 35,
+        "type": "gpu",
+        "nimi": "GTX 3830",
+        "hind": 4247,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2021,
+                "Graphics Clock (MHz)": 2287,
+                "Processor Clock (MHz)": 2239,
+                "Graphics Performance Score": 1851
+            },
+            "Memory Specs": {
+                "Memory Clock": "210 Gbps",
+                "Standard Memory Config": "1 GB GDDR2X",
+                "Memory Interface": "GDDR3",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "KUDA, 3D Vizion, MVIDIA G-SYNC™, GameRiver, DirectX 12, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "5787x5172@196Hz",
+                "Standard Display Connectors": "HDMI 2.0b"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 1,
+                "Height": 10,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 101,
+                "Maximum Graphics Card Power (W)": 304,
+                "Minimum System Power Requirement (W)": 902,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 36,
+        "type": "ram",
+        "nimi": "Crucial 32GB DDR1",
+        "hind": 763,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crucial",
+                "Nimi": "Crucial 32GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "32GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.5v",
+                "Siini kiirus": "2200MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, EEC"
+            }
+        }
+    },
+    {
+        "id": 37,
+        "type": "cpu",
+        "nimi": "Intel i3-8580",
+        "hind": 1886,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i3-8580",
+                "Tüüp": "i3",
+                "Mudel": "8580"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2.5GHz",
+                "CORE COUNT": 2,
+                "SOCKET": "6879S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, Hyperthreading, Speedstep"
+            }
+        }
+    },
+    {
+        "id": 38,
+        "type": "ram",
+        "nimi": "Goodram 24GB DDR2",
+        "hind": 348,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Goodram",
+                "Nimi": "Goodram 24GB DDR2",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "24GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1500MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, EEC, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 39,
+        "type": "gpu",
+        "nimi": "GTX 7340",
+        "hind": 552,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1948,
+                "Graphics Clock (MHz)": 2291,
+                "Processor Clock (MHz)": 1514,
+                "Graphics Performance Score": 2712
+            },
+            "Memory Specs": {
+                "Memory Clock": "710 Gbps",
+                "Standard Memory Config": "6 GB GDDR3X",
+                "Memory Interface": "GDDR3",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "KUDA, 3D Vizion, PhysZ, MVIDIA G-SYNC™, GameRiver, ShadowWorking, Anseel"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "8818x5109@150Hz",
+                "Standard Display Connectors": "DP 1.42, HDMI 2.0b"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 3,
+                "Height": 5,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 66,
+                "Maximum Graphics Card Power (W)": 186,
+                "Minimum System Power Requirement (W)": 974,
+                "Supplementary Power Connectors": "4-pin"
+            }
+        }
+    },
+    {
+        "id": 40,
+        "type": "gpu",
+        "nimi": "GTX 2860",
+        "hind": 4021,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2091,
+                "Graphics Clock (MHz)": 2913,
+                "Processor Clock (MHz)": 1706,
+                "Graphics Performance Score": 1426
+            },
+            "Memory Specs": {
+                "Memory Clock": "410 Gbps",
+                "Standard Memory Config": "11 GB GDDR1X",
+                "Memory Interface": "GDDR3",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "SLI, GameRiver, VR"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "6725x1176@191Hz",
+                "Standard Display Connectors": "HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 7,
+                "Height": 14,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 60,
+                "Maximum Graphics Card Power (W)": 407,
+                "Minimum System Power Requirement (W)": 650,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 41,
+        "type": "gpu",
+        "nimi": "GTX 6240",
+        "hind": 3997,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1367,
+                "Graphics Clock (MHz)": 1532,
+                "Processor Clock (MHz)": 1487,
+                "Graphics Performance Score": 2597
+            },
+            "Memory Specs": {
+                "Memory Clock": "310 Gbps",
+                "Standard Memory Config": "4 GB GDDR3X",
+                "Memory Interface": "GDDR1",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "SLI, 3D Vizion, PhysZ, MVIDIA G-SYNC™, VR, Anseel, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "8253x9930@154Hz",
+                "Standard Display Connectors": "HDMI 2.0b"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 11,
+                "Height": 10,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 98,
+                "Maximum Graphics Card Power (W)": 280,
+                "Minimum System Power Requirement (W)": 773,
+                "Supplementary Power Connectors": "5-pin"
+            }
+        }
+    },
+    {
+        "id": 42,
+        "type": "gpu",
+        "nimi": "GTX 7620",
+        "hind": 4449,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2964,
+                "Graphics Clock (MHz)": 2024,
+                "Processor Clock (MHz)": 1328,
+                "Graphics Performance Score": 2423
+            },
+            "Memory Specs": {
+                "Memory Clock": "910 Gbps",
+                "Standard Memory Config": "15 GB GDDR2X",
+                "Memory Interface": "GDDR3",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "3D Vizion, GameRiver, ShadowWorking, Anseel"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "4788x5400@172Hz",
+                "Standard Display Connectors": "DP 1.42"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 13,
+                "Height": 4,
+                "Width": "1-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 105,
+                "Maximum Graphics Card Power (W)": 127,
+                "Minimum System Power Requirement (W)": 649,
+                "Supplementary Power Connectors": "6-pin"
+            }
+        }
+    },
+    {
+        "id": 43,
+        "type": "cpu",
+        "nimi": "Intel i5-3510h",
+        "hind": 345,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i5-3510h",
+                "Tüüp": "i5",
+                "Mudel": "3510h"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1GHz",
+                "CORE COUNT": 16,
+                "SOCKET": "4380S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, Hyperthreading, VT-x, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 44,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 5 1800X",
+        "hind": 453,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 5 1800X",
+                "Tüüp": "Ryzen5",
+                "Mudel": "1800X"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.3GHz",
+                "CORE COUNT": 2,
+                "SOCKET": "7617S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, AES"
+            }
+        }
+    },
+    {
+        "id": 45,
+        "type": "cpu",
+        "nimi": "Intel i7-9150k",
+        "hind": 320,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i7-9150k",
+                "Tüüp": "i7",
+                "Mudel": "9150k"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2.7GHz",
+                "CORE COUNT": 16,
+                "SOCKET": "1278S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Hyperthreading, Speedstep, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 46,
+        "type": "ram",
+        "nimi": "G.SKILL 18GB DDR3",
+        "hind": 133,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "G.SKILL",
+                "Nimi": "G.SKILL 18GB DDR3",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "18GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1600MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, EEC, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 47,
+        "type": "cpu",
+        "nimi": "Intel i3-2210h",
+        "hind": 562,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i3-2210h",
+                "Tüüp": "i3",
+                "Mudel": "2210h"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.1GHz",
+                "CORE COUNT": 4,
+                "SOCKET": "6799S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, VT-x, Speedstep, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 48,
+        "type": "gpu",
+        "nimi": "GTX 5320",
+        "hind": 1731,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2958,
+                "Graphics Clock (MHz)": 1940,
+                "Processor Clock (MHz)": 2738,
+                "Graphics Performance Score": 2046
+            },
+            "Memory Specs": {
+                "Memory Clock": "610 Gbps",
+                "Standard Memory Config": "5 GB GDDR4X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "KUDA, MVIDIA G-SYNC™, VR, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "9765x7392@185Hz",
+                "Standard Display Connectors": "HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 9,
+                "Height": 9,
+                "Width": "1-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 65,
+                "Maximum Graphics Card Power (W)": 406,
+                "Minimum System Power Requirement (W)": 771,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 49,
+        "type": "ram",
+        "nimi": "Silicon Power 18GB DDR2",
+        "hind": 504,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Silicon Power",
+                "Nimi": "Silicon Power 18GB DDR2",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "18GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1500MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, RGB LED"
+            }
+        }
+    },
+    {
+        "id": 50,
+        "type": "ram",
+        "nimi": "Kingston 12GB DDR3",
+        "hind": 937,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Kingston",
+                "Nimi": "Kingston 12GB DDR3",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "12GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1900MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, RGB LED"
+            }
+        }
+    },
+    {
+        "id": 51,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 5 Pro 1300",
+        "hind": 279,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 5 Pro 1300",
+                "Tüüp": "Ryzen5",
+                "Mudel": "1300"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2.6GHz",
+                "CORE COUNT": 8,
+                "SOCKET": "1893S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, SMT, AES, AVX2, FMA3"
+            }
+        }
+    },
+    {
+        "id": 52,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 3 1000X",
+        "hind": 343,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 3 1000X",
+                "Tüüp": "Ryzen3",
+                "Mudel": "1000X"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "3.4GHz",
+                "CORE COUNT": 16,
+                "SOCKET": "9458S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, SMT, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 53,
+        "type": "gpu",
+        "nimi": "GTX 2210",
+        "hind": 283,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2481,
+                "Graphics Clock (MHz)": 1964,
+                "Processor Clock (MHz)": 2447,
+                "Graphics Performance Score": 2647
+            },
+            "Memory Specs": {
+                "Memory Clock": "510 Gbps",
+                "Standard Memory Config": "2 GB GDDR1X",
+                "Memory Interface": "GDDR4",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "GameRiver, ShadowWorking, Anseel"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "4366x6977@48Hz",
+                "Standard Display Connectors": "HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 12,
+                "Height": 12,
+                "Width": "1-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 64,
+                "Maximum Graphics Card Power (W)": 368,
+                "Minimum System Power Requirement (W)": 612,
+                "Supplementary Power Connectors": "6-pin"
+            }
+        }
+    },
+    {
+        "id": 54,
+        "type": "gpu",
+        "nimi": "GTX 7210",
+        "hind": 3383,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2167,
+                "Graphics Clock (MHz)": 1768,
+                "Processor Clock (MHz)": 2734,
+                "Graphics Performance Score": 2599
+            },
+            "Memory Specs": {
+                "Memory Clock": "610 Gbps",
+                "Standard Memory Config": "12 GB GDDR4X",
+                "Memory Interface": "GDDR1",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "SLI, 3D Vizion, ShadowWorking, VR, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "6320x1947@8Hz",
+                "Standard Display Connectors": "DP 1.42"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 7,
+                "Height": 4,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 116,
+                "Maximum Graphics Card Power (W)": 444,
+                "Minimum System Power Requirement (W)": 864,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 55,
+        "type": "cpu",
+        "nimi": "Intel i3-5460h",
+        "hind": 1211,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i3-5460h",
+                "Tüüp": "i3",
+                "Mudel": "5460h"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "3.3GHz",
+                "CORE COUNT": 2,
+                "SOCKET": "5346S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, Hyperthreading, VT-x, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 56,
+        "type": "cpu",
+        "nimi": "Intel i3-8280hm",
+        "hind": 1084,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i3-8280hm",
+                "Tüüp": "i3",
+                "Mudel": "8280hm"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2.4GHz",
+                "CORE COUNT": 4,
+                "SOCKET": "7776S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, Hyperthreading, VT-x, Speedstep, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 57,
+        "type": "cpu",
+        "nimi": "Intel i3-2150k",
+        "hind": 1531,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i3-2150k",
+                "Tüüp": "i3",
+                "Mudel": "2150k"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2.1GHz",
+                "CORE COUNT": 2,
+                "SOCKET": "1173S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, Speedstep, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 58,
+        "type": "cpu",
+        "nimi": "Intel i5-6890q",
+        "hind": 373,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i5-6890q",
+                "Tüüp": "i5",
+                "Mudel": "6890q"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.8GHz",
+                "CORE COUNT": 16,
+                "SOCKET": "2785S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Hyperthreading, VT-x, Speedstep, VR READY"
+            }
+        }
+    },
+    {
+        "id": 59,
+        "type": "gpu",
+        "nimi": "GTX 2420",
+        "hind": 4400,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2151,
+                "Graphics Clock (MHz)": 1131,
+                "Processor Clock (MHz)": 1420,
+                "Graphics Performance Score": 2261
+            },
+            "Memory Specs": {
+                "Memory Clock": "410 Gbps",
+                "Standard Memory Config": "1 GB GDDR3X",
+                "Memory Interface": "GDDR1",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "SLI, KUDA, 3D Vizion, GameRiver, Anseel"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "2420x4013@90Hz",
+                "Standard Display Connectors": ""
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 6,
+                "Height": 12,
+                "Width": "1-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 77,
+                "Maximum Graphics Card Power (W)": 392,
+                "Minimum System Power Requirement (W)": 880,
+                "Supplementary Power Connectors": "6-pin"
+            }
+        }
+    },
+    {
+        "id": 60,
+        "type": "ram",
+        "nimi": "Crucial 16GB DDR2",
+        "hind": 554,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crucial",
+                "Nimi": "Crucial 16GB DDR2",
+                "Moodulite arv": 1
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "16GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.5v",
+                "Siini kiirus": "2100MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, EEC, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 61,
+        "type": "cpu",
+        "nimi": "Intel i7-4080kq",
+        "hind": 1554,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i7-4080kq",
+                "Tüüp": "i7",
+                "Mudel": "4080kq"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.2GHz",
+                "CORE COUNT": 1,
+                "SOCKET": "7709S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Hyperthreading, VT-x"
+            }
+        }
+    },
+    {
+        "id": 62,
+        "type": "gpu",
+        "nimi": "GTX 7870",
+        "hind": 3723,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2251,
+                "Graphics Clock (MHz)": 2782,
+                "Processor Clock (MHz)": 2182,
+                "Graphics Performance Score": 2452
+            },
+            "Memory Specs": {
+                "Memory Clock": "710 Gbps",
+                "Standard Memory Config": "8 GB GDDR1X",
+                "Memory Interface": "GDDR4",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "KUDA, PhysZ, VR"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "2835x1882@149Hz",
+                "Standard Display Connectors": "HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 11,
+                "Height": 11,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 116,
+                "Maximum Graphics Card Power (W)": 341,
+                "Minimum System Power Requirement (W)": 556,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 63,
+        "type": "cpu",
+        "nimi": "Intel i9-6080hm",
+        "hind": 1376,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i9-6080hm",
+                "Tüüp": "i9",
+                "Mudel": "6080hm"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "3.3GHz",
+                "CORE COUNT": 2,
+                "SOCKET": "4081S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, Speedstep, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 64,
+        "type": "gpu",
+        "nimi": "GTX 5550",
+        "hind": 835,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1379,
+                "Graphics Clock (MHz)": 1527,
+                "Processor Clock (MHz)": 2311,
+                "Graphics Performance Score": 1451
+            },
+            "Memory Specs": {
+                "Memory Clock": "610 Gbps",
+                "Standard Memory Config": "10 GB GDDR2X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "SLI, KUDA, MVIDIA G-SYNC™, GameRiver, VR, Anseel"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "9523x8370@211Hz",
+                "Standard Display Connectors": "DP 1.42, HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 4,
+                "Height": 14,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 76,
+                "Maximum Graphics Card Power (W)": 326,
+                "Minimum System Power Requirement (W)": 874,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 65,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 5 Pro 1600",
+        "hind": 458,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 5 Pro 1600",
+                "Tüüp": "Ryzen5",
+                "Mudel": "1600"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2GHz",
+                "CORE COUNT": 1,
+                "SOCKET": "8302S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, SMT, AES, AVX2, FMA3, VR READY"
+            }
+        }
+    },
+    {
+        "id": 66,
+        "type": "gpu",
+        "nimi": "GTX 2830",
+        "hind": 4687,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2019,
+                "Graphics Clock (MHz)": 1940,
+                "Processor Clock (MHz)": 1748,
+                "Graphics Performance Score": 2845
+            },
+            "Memory Specs": {
+                "Memory Clock": "310 Gbps",
+                "Standard Memory Config": "14 GB GDDR3X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "GameRiver, ShadowWorking, DirectX 12"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "2999x4111@171Hz",
+                "Standard Display Connectors": "DP 1.42, HDMI 2.0b"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 2,
+                "Height": 3,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 86,
+                "Maximum Graphics Card Power (W)": 413,
+                "Minimum System Power Requirement (W)": 887,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 67,
+        "type": "gpu",
+        "nimi": "GTX 2760",
+        "hind": 3806,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1095,
+                "Graphics Clock (MHz)": 2473,
+                "Processor Clock (MHz)": 2344,
+                "Graphics Performance Score": 2493
+            },
+            "Memory Specs": {
+                "Memory Clock": "710 Gbps",
+                "Standard Memory Config": "9 GB GDDR4X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "SLI, KUDA, 3D Vizion, MVIDIA G-SYNC™, ShadowWorking, DirectX 12, Anseel"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "1082x9596@6Hz",
+                "Standard Display Connectors": ""
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 3,
+                "Height": 8,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 103,
+                "Maximum Graphics Card Power (W)": 273,
+                "Minimum System Power Requirement (W)": 640,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 68,
+        "type": "cpu",
+        "nimi": "Intel i5-6320h",
+        "hind": 778,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i5-6320h",
+                "Tüüp": "i5",
+                "Mudel": "6320h"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.1GHz",
+                "CORE COUNT": 2,
+                "SOCKET": "6984S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, Hyperthreading, VT-x, Speedstep"
+            }
+        }
+    },
+    {
+        "id": 69,
+        "type": "ram",
+        "nimi": "Samsung 2GB DDR1",
+        "hind": 477,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Samsung",
+                "Nimi": "Samsung 2GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "2GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1900MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 70,
+        "type": "ram",
+        "nimi": "Dell 1GB DDR2",
+        "hind": 680,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Dell",
+                "Nimi": "Dell 1GB DDR2",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "1GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1700MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "NON-ECC unbuffered, Heat sink, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 71,
+        "type": "cpu",
+        "nimi": "Intel i7-6490",
+        "hind": 1333,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i7-6490",
+                "Tüüp": "i7",
+                "Mudel": "6490"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.4GHz",
+                "CORE COUNT": 4,
+                "SOCKET": "4082S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "VT-x, Speedstep, AES"
+            }
+        }
+    },
+    {
+        "id": 72,
+        "type": "gpu",
+        "nimi": "GTX 4170",
+        "hind": 4414,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1502,
+                "Graphics Clock (MHz)": 2650,
+                "Processor Clock (MHz)": 1050,
+                "Graphics Performance Score": 2739
+            },
+            "Memory Specs": {
+                "Memory Clock": "510 Gbps",
+                "Standard Memory Config": "1 GB GDDR3X",
+                "Memory Interface": "GDDR1",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "SLI, KUDA, 3D Vizion, PhysZ, VR, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "2497x7167@222Hz",
+                "Standard Display Connectors": "DP 1.42, HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 6,
+                "Height": 11,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 68,
+                "Maximum Graphics Card Power (W)": 325,
+                "Minimum System Power Requirement (W)": 958,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 73,
+        "type": "ram",
+        "nimi": "G.SKILL 64GB DDR3",
+        "hind": 480,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "G.SKILL",
+                "Nimi": "G.SKILL 64GB DDR3",
+                "Moodulite arv": 1
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "64GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1700MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, RGB LED"
+            }
+        }
+    },
+    {
+        "id": 74,
+        "type": "gpu",
+        "nimi": "GTX 2470",
+        "hind": 3781,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2547,
+                "Graphics Clock (MHz)": 2204,
+                "Processor Clock (MHz)": 1881,
+                "Graphics Performance Score": 2596
+            },
+            "Memory Specs": {
+                "Memory Clock": "310 Gbps",
+                "Standard Memory Config": "5 GB GDDR3X",
+                "Memory Interface": "GDDR1",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "3D Vizion, GameRiver, Anseel, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "2516x5535@48Hz",
+                "Standard Display Connectors": "DP 1.42, HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 5,
+                "Height": 9,
+                "Width": "3-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 119,
+                "Maximum Graphics Card Power (W)": 446,
+                "Minimum System Power Requirement (W)": 644,
+                "Supplementary Power Connectors": "6-pin"
+            }
+        }
+    },
+    {
+        "id": 75,
+        "type": "cpu",
+        "nimi": "Intel i9-1630",
+        "hind": 1829,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i9-1630",
+                "Tüüp": "i9",
+                "Mudel": "1630"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.8GHz",
+                "CORE COUNT": 8,
+                "SOCKET": "3844S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, Hyperthreading, Speedstep, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 76,
+        "type": "ram",
+        "nimi": "Crosair 32GB DDR3",
+        "hind": 842,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crosair",
+                "Nimi": "Crosair 32GB DDR3",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "32GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "2200MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, EEC, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 77,
+        "type": "ram",
+        "nimi": "Kingston 64GB DDR3",
+        "hind": 354,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Kingston",
+                "Nimi": "Kingston 64GB DDR3",
+                "Moodulite arv": 1
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "64GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1300MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, Heat sink, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 78,
+        "type": "ram",
+        "nimi": "G.SKILL 128GB DDR1",
+        "hind": 714,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "G.SKILL",
+                "Nimi": "G.SKILL 128GB DDR1",
+                "Moodulite arv": 1
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "128GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1600MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "NON-ECC unbuffered, Heat sink, EEC, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 79,
+        "type": "ram",
+        "nimi": "Crucial 32GB DDR1",
+        "hind": 963,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crucial",
+                "Nimi": "Crucial 32GB DDR1",
+                "Moodulite arv": 1
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "32GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "2100MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, RGB LED"
+            }
+        }
+    },
+    {
+        "id": 80,
+        "type": "gpu",
+        "nimi": "GTX 5570",
+        "hind": 974,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2859,
+                "Graphics Clock (MHz)": 1725,
+                "Processor Clock (MHz)": 2490,
+                "Graphics Performance Score": 2687
+            },
+            "Memory Specs": {
+                "Memory Clock": "310 Gbps",
+                "Standard Memory Config": "10 GB GDDR2X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "SLI, KUDA, MVIDIA G-SYNC™, GameRiver, ShadowWorking, DirectX 12, VR, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "1909x1941@5Hz",
+                "Standard Display Connectors": "HDMI 2.0b, DL-DVI"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 12,
+                "Height": 13,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 84,
+                "Maximum Graphics Card Power (W)": 345,
+                "Minimum System Power Requirement (W)": 740,
+                "Supplementary Power Connectors": "7-pin"
+            }
+        }
+    },
+    {
+        "id": 81,
+        "type": "gpu",
+        "nimi": "GTX 5830",
+        "hind": 3927,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 1704,
+                "Graphics Clock (MHz)": 2133,
+                "Processor Clock (MHz)": 2750,
+                "Graphics Performance Score": 2545
+            },
+            "Memory Specs": {
+                "Memory Clock": "610 Gbps",
+                "Standard Memory Config": "2 GB GDDR3X",
+                "Memory Interface": "GDDR2",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 1.0",
+                "Supported Technologies": "SLI, KUDA, GameRiver, DirectX 12, VR, Anseel"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "7050x6897@208Hz",
+                "Standard Display Connectors": "DP 1.42, HDMI 2.0b"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 2,
+                "Height": 10,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 67,
+                "Maximum Graphics Card Power (W)": 58,
+                "Minimum System Power Requirement (W)": 753,
+                "Supplementary Power Connectors": "6-pin"
+            }
+        }
+    },
+    {
+        "id": 82,
+        "type": "ram",
+        "nimi": "Silicon Power 64GB DDR2",
+        "hind": 467,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Silicon Power",
+                "Nimi": "Silicon Power 64GB DDR2",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "64GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.5v",
+                "Siini kiirus": "2200MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink"
+            }
+        }
+    },
+    {
+        "id": 83,
+        "type": "ram",
+        "nimi": "Silicon Power 6GB DDR1",
+        "hind": 712,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Silicon Power",
+                "Nimi": "Silicon Power 6GB DDR1",
+                "Moodulite arv": 2
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "6GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1600MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "NON-ECC unbuffered, Heat sink, EEC, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 84,
+        "type": "cpu",
+        "nimi": "Intel i9-5940khq",
+        "hind": 1146,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i9-5940khq",
+                "Tüüp": "i9",
+                "Mudel": "5940khq"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "1.4GHz",
+                "CORE COUNT": 16,
+                "SOCKET": "9125S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, Hyperthreading, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 85,
+        "type": "ram",
+        "nimi": "G.SKILL 64GB DDR2",
+        "hind": 371,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "G.SKILL",
+                "Nimi": "G.SKILL 64GB DDR2",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "64GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1600MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, Heat sink, EEC"
+            }
+        }
+    },
+    {
+        "id": 86,
+        "type": "ram",
+        "nimi": "A-Data 6GB DDR1",
+        "hind": 699,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "A-Data",
+                "Nimi": "A-Data 6GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "6GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "1700MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 87,
+        "type": "ram",
+        "nimi": "Dell 2GB DDR1",
+        "hind": 211,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Dell",
+                "Nimi": "Dell 2GB DDR1",
+                "Moodulite arv": 2
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "2GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "2300MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "NON-ECC unbuffered, Heat sink, EEC, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 88,
+        "type": "gpu",
+        "nimi": "GTX 1570",
+        "hind": 194,
+        "pilt": "pildid/gpu.png",
+        "specs": {
+            "GPU ENGINE SPECS": {
+                "CUDA Cores": 2727,
+                "Graphics Clock (MHz)": 1427,
+                "Processor Clock (MHz)": 1357,
+                "Graphics Performance Score": 1228
+            },
+            "Memory Specs": {
+                "Memory Clock": "210 Gbps",
+                "Standard Memory Config": "14 GB GDDR2X",
+                "Memory Interface": "GDDR3",
+                "Memory Interface Width": "256-bit"
+            },
+            "Feature Support": {
+                "Bus Support": "PCIe 2.0",
+                "Supported Technologies": "SLI, KUDA, 3D Vizion, MVIDIA G-SYNC™, GameRiver, Anseel, MVIDIA WhisperMode"
+            },
+            "Display Support": {
+                "Maximum Digital Resolution": "7623x9072@215Hz",
+                "Standard Display Connectors": "HDMI 2.0b"
+            },
+            "Standard Graphics Card Dimensions": {
+                "Length": 6,
+                "Height": 3,
+                "Width": "2-slot"
+            },
+            "Thermal and Power Specs": {
+                "Maximum GPU Temperature (in C)": 95,
+                "Maximum Graphics Card Power (W)": 182,
+                "Minimum System Power Requirement (W)": 908,
+                "Supplementary Power Connectors": "6-pin"
+            }
+        }
+    },
+    {
+        "id": 89,
+        "type": "ram",
+        "nimi": "Crosair 1GB DDR1",
+        "hind": 649,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crosair",
+                "Nimi": "Crosair 1GB DDR1",
+                "Moodulite arv": 2
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "1GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1700MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "NON-ECC unbuffered, Heat sink, EEC"
+            }
+        }
+    },
+    {
+        "id": 90,
+        "type": "cpu",
+        "nimi": "Intel i3-1550kh",
+        "hind": 449,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i3-1550kh",
+                "Tüüp": "i3",
+                "Mudel": "1550kh"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "3GHz",
+                "CORE COUNT": 8,
+                "SOCKET": "9054S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Hyperthreading, Speedstep"
+            }
+        }
+    },
+    {
+        "id": 91,
+        "type": "ram",
+        "nimi": "Dell 128GB DDR2",
+        "hind": 102,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Dell",
+                "Nimi": "Dell 128GB DDR2",
+                "Moodulite arv": 4
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "128GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1300MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "EEC, RGB LED"
+            }
+        }
+    },
+    {
+        "id": 92,
+        "type": "ram",
+        "nimi": "Kingston 8GB DDR2",
+        "hind": 345,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Kingston",
+                "Nimi": "Kingston 8GB DDR2",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "8GB",
+                "Tüüp": "DDR2",
+                "Voltage": "1.5v",
+                "Siini kiirus": "2200MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, EEC, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 93,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 7 1700",
+        "hind": 416,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 7 1700",
+                "Tüüp": "Ryzen7",
+                "Mudel": "1700"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "3.3GHz",
+                "CORE COUNT": 8,
+                "SOCKET": "6219S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "SMT"
+            }
+        }
+    },
+    {
+        "id": 94,
+        "type": "ram",
+        "nimi": "Crosair 1GB DDR1",
+        "hind": 427,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crosair",
+                "Nimi": "Crosair 1GB DDR1",
+                "Moodulite arv": 8
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "1GB",
+                "Tüüp": "DDR1",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "2000MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, Heat sink, EEC, RGB LED"
+            }
+        }
+    },
+    {
+        "id": 95,
+        "type": "cpu",
+        "nimi": "Intel i3-3660",
+        "hind": 434,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i3-3660",
+                "Tüüp": "i3",
+                "Mudel": "3660"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "2.7GHz",
+                "CORE COUNT": 8,
+                "SOCKET": "9976S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, Hyperthreading, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 96,
+        "type": "cpu",
+        "nimi": "Intel i5-4050",
+        "hind": 854,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "intel",
+                "Nimi": "Intel i5-4050",
+                "Tüüp": "i5",
+                "Mudel": "4050"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "3.1GHz",
+                "CORE COUNT": 1,
+                "SOCKET": "2811S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, Speedstep, AES, VR READY"
+            }
+        }
+    },
+    {
+        "id": 97,
+        "type": "cpu",
+        "nimi": "AMD Ryzen 3 Pro 1300X",
+        "hind": 127,
+        "pilt": "pildid/cpu.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "AMD",
+                "Nimi": "AMD Ryzen 3 Pro 1300X",
+                "Tüüp": "Ryzen3",
+                "Mudel": "1300X"
+            },
+            "TEHINILISED NÄITAJAD": {
+                "CPU CLOCK": "3.3GHz",
+                "CORE COUNT": 8,
+                "SOCKET": "9762S"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Overclockable, Heat sink, SMT, AES, FMA3, VR READY"
+            }
+        }
+    },
+    {
+        "id": 98,
+        "type": "ram",
+        "nimi": "Crosair 1GB DDR3",
+        "hind": 807,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Crosair",
+                "Nimi": "Crosair 1GB DDR3",
+                "Moodulite arv": 2
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "1GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.2v LOW VOLTAGE",
+                "Siini kiirus": "2100MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Heat sink, RGB LED, Overclock enabled"
+            }
+        }
+    },
+    {
+        "id": 99,
+        "type": "ram",
+        "nimi": "Silicon Power 24GB DDR3",
+        "hind": 515,
+        "pilt": "pildid/ram.png",
+        "specs": {
+            "ÜLDNÄITAJAD": {
+                "Tootja": "Silicon Power",
+                "Nimi": "Silicon Power 24GB DDR3",
+                "Moodulite arv": 1
+            },
+            "TEHNIILISED NÄITAJAD": {
+                "Maht": "24GB",
+                "Tüüp": "DDR3",
+                "Voltage": "1.5v",
+                "Siini kiirus": "1800MHz"
+            },
+            "ERIMÄRKUSED": {
+                "Lisad": "Anti-Static band, NON-ECC unbuffered, EEC"
+            }
+        }
+    }
+]

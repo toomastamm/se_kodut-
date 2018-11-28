@@ -17,47 +17,44 @@ function muuda_nähtavust(id) {
     }
 }
 
-function beautify(list) {
-    if (typeof list === "string") {
-        return list
+function vormista(variable) {
+    if (typeof variable === "string") {
+        return variable
     }
-    if (typeof list === "number") {
-        return list
+    if (typeof variable === "number") {
+        return variable
     }
-    let string = "";
-    for (let i = 0; i < list.length - 1; i++) {
-        string += list[i];
-        string += ", "
-    }
-    string += list[list.length];
-    return string
+
+    if (variable.length === 0) { return "" }
+
+    return variable.join(", ")
 }
 
-function dict_tabeliks(dict) {
-    let tabel = "";
-    Object.entries(dict).forEach(function (element) {
-        tabel += ("<table class='tabel'><caption class='tabel_pealkiri'>" + element[0] + "</caption>");
+function html_speclist(specs, sihtmärk, template_tabel, template_veerg) {
+    sihtmärk.innerHTML = "";
+    Object.entries(specs).forEach(function (element) {
+        let tabel = document.importNode(template_tabel.content, true);
+        tabel.querySelector("#tabel_pealkiri").innerHTML = element[0];
         Object.entries(element[1]).forEach(function (element) {
-            tabel += '<tr class="tabel_veerg"><td class="tabel_vasak">' + element[0] + "</td>";
-            tabel += '<td class="tabel_parem">' + beautify(element[1]) + '</td>';
-            tabel += '</tr>'
+            let veerg = document.importNode(template_veerg.content, true);
+            veerg.querySelector("#tabel_vasak").innerHTML = element[0];
+            veerg.querySelector("#tabel_parem").innerHTML = vormista(element[1]);
+            tabel.querySelector("#specs_tabel").appendChild(veerg);
         });
-        tabel += '</table>';
-        //console.log("---")
+
+        sihtmärk.appendChild(tabel)
     });
 
-    return tabel
 }
 
-function tooted_flexiks(tooted) {
-    let flex = "";
+function html_tootelist(tooted, sihtmärk, template) {
+    sihtmärk.innerHTML = "";
     for (let i = 0; i < tooted.length; i++) {
-        flex += '<div class="asi">';
-        flex += '<img class="pilt" src="' + tooted[i]["pilt"] + '">';
-        flex += '<div class="nimi">' + tooted[i]["nimi"] + '</div>';
-        flex += '<a class="hind" href="' + "toode.html?id=" + tooted[i]["id"] + '">' + tooted[i]["hind"] + '€</a>';
-        flex += '</div>'
+        let toode = document.importNode(template.content, true);
+        toode.querySelector("#pilt").src = tooted[i]["pilt"];
+        toode.querySelector("#nimi").textContent = tooted[i]["nimi"];
+        toode.querySelector("#hind").textContent = tooted[i]["hind"] + "€";
+        toode.querySelector("#hind").href = "toode.html?id=" + tooted[i]["id"];
+        sihtmärk.appendChild(toode);
     }
-    //console.log(flex);
-    return flex
 }
